@@ -67,6 +67,8 @@ p {
   padding-left: 20px;
   padding-right: 20px;
 
+
+
   @include for-size(tablet-portrait) {
     width: 320px;
   }
