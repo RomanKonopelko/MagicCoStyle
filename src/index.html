@@ -6,29 +6,8 @@
     <title>Заголовок страницы</title>
   </head>
   <body>
-    <header>
-      <div class="header container">
-        <a href="./">
-          <svg class="logo-main" width="128" height="45">
-            <use href="./images/icons/sprite/sprite.svg#icon-logo-main"></use>
-          </svg>
-        </a>
-        <nav>
-          <ul class="nav list">
-            <li class="nav-items">
-              <a href="#program">Программы обучения</a>
-            </li>
-            <li class="nav-items"><a href="#about">О нас</a></li>
-            <li class="nav-items">
-              <a href="#learningoptions">Варианты обучения</a>
-            </li>
-            <li class="nav-items"><a href="ourcontacts">Контакты</a></li>
-          </ul>
-        </nav>
-        <button class="button">Консультация по телефону</button>
-      </div>
-    </header>
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <include src="./html-partials/page-header.html"></include>
+    <!-- Скрипт идёт последним в разметке. В нём у>же подключен главный SASS-файл. -->
     <script src="./index.js"></script>
   </body>
 </html>
