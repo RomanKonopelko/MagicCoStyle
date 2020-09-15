@@ -30,7 +30,7 @@
     background-color: $accent-color;
   }
 
-  @media screen and (min-width: 1440px) {
+  @include for-size(desktop) {
     padding-top: 27px;
     padding-bottom: 27px;
     min-width: 336px;
@@ -78,7 +78,7 @@
     border: 2px solid $accent-color;
   }
 
-  @media screen and (min-width: 1440px) {
+  @include for-size(desktop) {
     padding-top: 27px;
     padding-bottom: 27px;
     min-width: 354px;
