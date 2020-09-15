@@ -1,3 +1,17 @@
 .features__list {
   display: flex;
 }
+
+.features__item {
+  &:not(:last-child) {
+    margin: 0 30px 0 0;
+
+    @include for-size(tablet) {
+      margin: 0 0 0 21px;
+    }
+
+    @include for-size(desktop) {
+      margin: 0 0 0 0;
+    }
+  }
+}
