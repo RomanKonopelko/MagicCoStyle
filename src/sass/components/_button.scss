@@ -1,4 +1,7 @@
 .header .button {
+  @include for-size(tablet-portrait) {
+    display: none;
+  }
   // Size
   padding-top: 14px;
   padding-bottom: 14px;
