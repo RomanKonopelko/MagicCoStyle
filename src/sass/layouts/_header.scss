@@ -7,13 +7,22 @@
   padding-top: 45px;
 }
 
-.nav {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.nav.enumeration {
+  display: none;
+  @include for-size(desktop) {
+    display: flex;
+    color: $primary-text-color;
+  }
 }
 
 .nav-items:not(:last-child) {
   margin-right: 40px;
+}
+
+.nav-items > a {
+  color: $primary-text-color;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
