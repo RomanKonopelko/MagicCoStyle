@@ -30,6 +30,17 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 // доп.класс, который сбрасывает с ul маркеры и базовые маржины и паддинги
 .enumeration {
   padding: 0;
