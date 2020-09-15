@@ -1,98 +1,89 @@
-.header.button {
+.header .button {
+  // Size
+  padding-top: 14px;
+  padding-bottom: 14px;
+  min-width: 260px;
 
-    // Size
-    padding-top: 14px;
-    padding-bottom: 14px;
-    min-width: 260px;
+  // Visual
+  border: 2px solid $accent-color;
+  background-color: transparent;
+  color: $accent-color;
 
-    // Visual
-    border: 2px solid $acent-color;
-    background-color: transparent;
-    color: $acent-color;
+  // Text
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  // Reset
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+
+  //  Effects
+  //   transition: color $transition, background-color $transition;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $accent-color;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-top: 27px;
+    padding-bottom: 27px;
+    min-width: 336px;
 
     // Text
     font-weight: bold;
-    font-size: 12px;
-    line-height: 1.25;
-    letter-spacing: 0.08em;
+    font-size: 14px;
+    line-height: 1.22;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-
-    // Reset
-    cursor: pointer;
-    outline: none;
-    text-decoration: none;
-
-
-    //  Effects
-    transition: color $transition,
-        background-color $transition;
-
-    &:hover {
-        color: #ffffff;
-        background-color: $acent-color;
-
-    }
-
-    @media screen and (min-width: 1440px) {
-        padding-top: 27px;
-        padding-bottom: 27px;
-        min-width: 336px;
-
-        // Text
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 1.22;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-
-    }
+  }
 }
 
+.main .button {
+  // Size
+  padding-top: 14px;
+  padding-bottom: 14px;
+  min-width: 260px;
 
-.main.button {
+  // Visual
+  background-color: $accent-color;
+  color: #ffffff;
 
-    // Size
-    padding-top: 14px;
-    padding-bottom: 14px;
-    min-width: 260px;
+  // Text
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 
-    // Visual
-    background-color: $acent-color;
-    color: #ffffff;
+  // Reset
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-decoration: none;
+
+  //  Effects
+  //   transition: color $transition, background-color $transition;
+
+  &:hover {
+    color: $accent-color;
+    background-color: $primary-bg-color;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-top: 27px;
+    padding-bottom: 27px;
+    min-width: 354px;
 
     // Text
     font-weight: bold;
-    font-size: 12px;
-    line-height: 1.25;
-    letter-spacing: 0.08em;
+    font-size: 14px;
+    line-height: 1.22;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-
-    // Reset
-    cursor: pointer;
-    border: none;
-    outline: none;
-    text-decoration: none;
-
-    //  Effects
-    transition: color $transition,
-        background-color $transition;
-
-    &:hover {
-        color: $acent-color;
-        background-color: $main-bg-color;
-
-    }
-
-    @media screen and (min-width: 1440px) {
-        padding-top: 27px;
-        padding-bottom: 27px;
-        min-width: 354px;
-
-        // Text
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 1.22;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-    }
+  }
 }
