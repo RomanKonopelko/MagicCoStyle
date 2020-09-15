@@ -22,7 +22,8 @@
   text-decoration: none;
 
   //  Effects
-  //   transition: color $transition, background-color $transition;
+  transition: color $timing-function $transition-duration,
+    background-color $timing-function $transition-duration;
 
   &:hover {
     color: #ffffff;
@@ -52,6 +53,7 @@
   // Visual
   background-color: $accent-color;
   color: #ffffff;
+  border: 2px solid transparent;
 
   // Text
   font-weight: bold;
@@ -62,16 +64,18 @@
 
   // Reset
   cursor: pointer;
-  border: none;
   outline: none;
   text-decoration: none;
 
-  //  Effects
-  //   transition: color $transition, background-color $transition;
+  // Effects 
+  transition: color $timing-function $transition-duration,
+    background-color $timing-function $transition-duration,
+    border $timing-function $transition-duration;
 
   &:hover {
     color: $accent-color;
-    background-color: $primary-bg-color;
+    background-color: #ffffff;
+    border: 2px solid $accent-color;
   }
 
   @media screen and (min-width: 1440px) {
