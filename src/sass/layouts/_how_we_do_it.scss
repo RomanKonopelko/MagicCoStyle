@@ -1,20 +1,52 @@
 .container .main-title {
     margin-top: 0px;
     margin-bottom: 30px;
+
+    @include for-size(desktop) {
+        margin-bottom: 50px;
+    }
 }
 
 .methods {
 
+    @include for-size(tablet-landscape) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px;
+
+        @include for-size(desktop) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -10px;
+        }
+    }
+
     &-item {
         padding-top: 30px;
-        padding-bottom: 25px;
+        padding-bottom: 22px;
         text-align: center;
         box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
         transition: background-color $timing-function $transition-duration;
 
+        @include for-size(tablet-landscape) {
+            max-width: calc(50% - 20px);
+            margin: 10px;
+            padding-top: 40px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @include for-size(desktop) {
+            max-width: calc((100% - 60px) / 3);
+            margin: 10px;
+            padding-top: 40px;
+            padding-bottom: 55px;
+        }
+
     }
 
     &-item:not(:last-child) {
+
         margin-bottom: 15px;
     }
 
@@ -26,7 +58,6 @@
     }
 
     &-item-title {
-        position: relative;
         margin: 0px;
         margin-bottom: 15px;
         transition: color $timing-function $transition-duration;
@@ -53,7 +84,7 @@
         transition: color $timing-function $transition-duration;
 
         @include for-size(desktop) {
-            font-size: 28px;
+            font-size: 18px;
             line-height: 1.5;
         }
     }
