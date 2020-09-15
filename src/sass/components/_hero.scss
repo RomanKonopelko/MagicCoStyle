@@ -2,7 +2,7 @@
   width: 50%;
 }
 
-.main__title {
+.main-title {
   margin-bottom: 30px;
 
   font-weight: 800;
@@ -25,7 +25,7 @@
   }
 }
 
-.main__paragraph {
+.main-paragraph {
   margin-bottom: 30px;
 
   font-weight: 500;
@@ -42,10 +42,10 @@
   }
 }
 
-.main__paragraph__text {
+.main-paragraph-text {
   color: $primary-text-color;
 }
 
-.main__paragraph__score {
+.main-paragraph-score {
   color: $accent-color;
 }
