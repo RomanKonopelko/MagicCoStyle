@@ -9,6 +9,7 @@
 
 .nav.enumeration {
   display: none;
+
   @include for-size(desktop) {
     display: flex;
     color: $primary-text-color;
@@ -19,10 +20,28 @@
   margin-right: 40px;
 }
 
-.nav-items > a {
+.nav-items>a {
   color: $primary-text-color;
+
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+}
+
+// Added by Magdegaben
+
+.logo-link {
+  width: 80px;
+  height: 29px;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/icons/logo-phone.svg);
+
+  @include for-size(tablet-landscape) {
+    width: 128px;
+    height: 45px;
+    background-image: url(../images/icons/logo-main.svg);
   }
 }

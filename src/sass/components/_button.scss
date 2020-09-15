@@ -1,4 +1,11 @@
 .header .button {
+  display: none;
+
+  @include for-size(tablet-landscape) {
+    display: block;
+
+  }
+
   // Size
   padding-top: 14px;
   padding-bottom: 14px;
@@ -23,7 +30,7 @@
 
   //  Effects
   transition: color $timing-function $transition-duration,
-    background-color $timing-function $transition-duration;
+  background-color $timing-function $transition-duration;
 
   &:hover {
     color: #ffffff;
@@ -90,4 +97,18 @@
     letter-spacing: 0.14em;
     text-transform: uppercase;
   }
+}
+
+.button-menu {
+  // outline: none;
+  padding: 0px;
+  background-color: transparent;
+  border: none;
+
+  @include for-size(tablet-landscape) {
+    display: none;
+
+  }
+
+
 }
