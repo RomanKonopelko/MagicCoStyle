@@ -6,13 +6,13 @@
 }
 
 body {
-  font-family: Montserrat;
+  font-family: $primary-font-family;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.67;
   letter-spacing: 0.08em;
 
-  color: #b9b9b9;
+  color: $primary-text-color;
 
   @include for-size(desktop) {
     font-size: 18px;
@@ -67,6 +67,8 @@ a {
   }
 
   @include for-size(desktop) {
+    padding-left: 62.5px;
+    padding-right: 62.5px;
     width: 1440px;
   }
 }
@@ -89,7 +91,7 @@ a {
   line-height: 1.36;
   letter-spacing: 0.03em;
 
-  color: #111518;
+  color: $title-text-color;
 
   @include for-size(tablet-landscape) {
     font-size: 26px;
@@ -107,7 +109,7 @@ a {
   font-size: 14px;
   line-height: 1.43;
 
-  color: #111518;
+  color: $title-text-color;
 
   @include for-size(desktop) {
     font-size: 20px;
