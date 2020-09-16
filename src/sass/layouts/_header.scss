@@ -140,6 +140,9 @@
 .mobile.enumeration {
   margin-bottom: 50px;
 
+  @include for-size(tablet-landscape) {
+    margin-top: 159px;
+  }
 
 }
 
