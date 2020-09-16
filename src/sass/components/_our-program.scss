@@ -1,0 +1,39 @@
+.our-program {
+  position: relative;
+  //   width: auto;
+  background-color: $secondary-bg-color;
+}
+.our-program .common-title {
+  margin-bottom: 45px;
+  text-align: center;
+  color: #ffffff;
+  @include for-size(tablet-portrait) {
+    text-align: left;
+  }
+}
+.program-list {
+  margin-left: 120px;
+}
+.program-list-item {
+  padding-bottom: 40px;
+}
+.program-list-title {
+  padding-bottom: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.program-sublist-title {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: 0.08em;
+  color: $accent-color;
+}
+.program-sublist:not(:last-child) {
+  margin-bottom: 8px;
+}
