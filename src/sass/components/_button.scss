@@ -3,7 +3,6 @@
 
   @include for-size(tablet-landscape) {
     display: block;
-
   }
 
   // Size
@@ -30,7 +29,7 @@
 
   //  Effects
   transition: color $timing-function $transition-duration,
-  background-color $timing-function $transition-duration;
+    background-color $timing-function $transition-duration;
 
   &:hover {
     color: #ffffff;
@@ -51,7 +50,7 @@
   }
 }
 
-.main .button {
+.button {
   // Size
   padding-top: 14px;
   padding-bottom: 14px;
@@ -79,7 +78,8 @@
     background-color $timing-function $transition-duration,
     border $timing-function $transition-duration;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $accent-color;
     background-color: #ffffff;
     border: 2px solid $accent-color;
@@ -108,33 +108,18 @@
   background-color: transparent;
   border: none;
 
-
-  &:hover .icon-menu {
-    fill: tomato;
-  }
-
-  &:hover .icon-close {
-    fill: tomato;
-  }
-
-
   &.is-open .icon-menu {
-    display: none
+    display: none;
   }
-
 
   @include for-size(desktop) {
     display: none;
-
   }
-
 }
-
 
 // Button inside mobile-menu
 
 .button-menu {
-
   display: block;
   // Size
   padding-top: 14px;
@@ -145,7 +130,6 @@
 
   @include for-size(tablet-portrait) {
     max-width: 260px;
-
   }
 
   // Visual
@@ -167,7 +151,7 @@
 
   //  Effects
   transition: color $timing-function $transition-duration,
-  background-color $timing-function $transition-duration;
+    background-color $timing-function $transition-duration;
 
   &:hover {
     color: #ffffff;
@@ -177,6 +161,4 @@
   @include for-size(tablet-landscape) {
     display: none;
   }
-
-
 }
