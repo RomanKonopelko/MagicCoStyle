@@ -2,10 +2,14 @@
     padding-top: 280px;
 }
 
-.container .main-title {
+.container .common-title {
     margin-top: 0px;
     margin-bottom: 30px;
     text-align: center;
+
+    @include for-size(tablet-landscape) {
+        text-align: center;
+    }
 
     @include for-size(desktop) {
         margin-bottom: 50px;
