@@ -99,11 +99,23 @@
   }
 }
 
+// Button for mobile menu
+
 .menu-button {
+  margin-left: 40px;
   outline: none;
   padding: 0px;
   background-color: transparent;
   border: none;
+
+
+  &:hover .icon-menu {
+    fill: tomato;
+  }
+
+  &:hover .icon-close {
+    fill: tomato;
+  }
 
 
   &.is-open .icon-menu {
@@ -117,6 +129,9 @@
   }
 
 }
+
+
+// Button inside mobile-menu
 
 .button-menu {
 
