@@ -1,6 +1,7 @@
 .container .main-title {
     margin-top: 0px;
     margin-bottom: 30px;
+    text-align: center;
 
     @include for-size(desktop) {
         margin-bottom: 50px;

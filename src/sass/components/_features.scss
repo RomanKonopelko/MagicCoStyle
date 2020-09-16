@@ -1,27 +1,52 @@
 .features-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .features-item {
   display: flex;
-  &::before {
-    content: '';
-    display: flex;
-    width: 58px;
-    height: 60px;
-    background-image: url(../images/icons/female.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  align-items: center;
+
   &:not(:last-child) {
-    margin: 0 30px 0 0;
+    margin: 0 0 30px 0;
 
     @include for-size(tablet) {
-      margin: 0 0 0 21px;
+      margin: 0 21px 0 0;
     }
 
     @include for-size(desktop) {
       margin: 0 0 0 0;
     }
   }
+}
+
+.features-icon-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 59px;
+  height: 60px;
+  border: 2px solid $accent-color;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 3px;
+    height: 70%;
+    background-color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -3px;
+  }
+}
+
+.features-icon {
+  fill: $accent-color;
+  height: 50px;
+}
+
+.features-parapraph {
+  margin: 0 0 0 10px;
 }
