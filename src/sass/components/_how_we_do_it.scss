@@ -1,3 +1,7 @@
+.section.explanation {
+    padding-top: 280px;
+}
+
 .container .main-title {
     margin-top: 0px;
     margin-bottom: 30px;
@@ -47,8 +51,10 @@
     }
 
     &-item:not(:last-child) {
+        @include for-size(max-tablet) {
+            margin-bottom: 15px;
+        }
 
-        margin-bottom: 15px;
     }
 
     &-item-image {

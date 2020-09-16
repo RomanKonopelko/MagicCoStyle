@@ -1,8 +1,5 @@
 // header //
 
-header {
-  position: relative;
-}
 
 .header {
   display: flex;
@@ -21,21 +18,31 @@ header {
 }
 
 .nav-items:not(:last-child) {
+
   margin-right: 40px;
 }
 
+.nav-items:last-child {
+  margin-right: 60px;
+}
+
 .nav-items>a {
+  font-size: 14px;
+  line-height: 1.21;
   color: $primary-text-color;
 
   &:hover,
+  &:focus,
   &:focus {
     color: $accent-color;
   }
 }
 
+
 // Added by Magdegaben
 
 .logo-link {
+
   width: 80px;
   height: 29px;
   display: inline-block;
@@ -44,9 +51,14 @@ header {
   background-image: url(../images/icons/logo-phone.svg);
 
   @include for-size(tablet-landscape) {
+    margin-right: 239px;
     width: 128px;
     height: 45px;
     background-image: url(../images/icons/logo-main.svg);
+  }
+
+  @include for-size(desktop) {
+    margin-right: 143px;
   }
 }
 
@@ -103,4 +115,8 @@ header {
 
 .mobile.enumeration {
   margin-bottom: 50px;
+}
+
+.icon-close {
+  fill: #ffffff;
 }
