@@ -1,6 +1,6 @@
 .registration {
   max-width: 1680px;
-  height: 840px;
+  height: 507px;
   text-align: center;
 
   background-color: $secondary-bg-color;
@@ -27,7 +27,8 @@
     background-image: url(../images/pictures/mobile/form-mobile@3x.png);
   }
 
-  @include for-size(tablet) {
+  @include for-size(tablet-landscape) {
+    height: 520px;
     background-image: url(../images/pictures/tablet/form-tablet.png);
 
     @media screen and (min-device-pixel-ratio: 2),
@@ -44,6 +45,7 @@
   }
 
   @include for-size(desktop) {
+    height: 840px;
     padding-top: 100px;
     padding-bottom: 100px;
     background-image: url(../images/pictures/desktop/form-desktop.png);
@@ -63,11 +65,11 @@
 }
 
 .form {
-  @include for-size(desktop) {
+  @include for-size(tablet-landscape) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: center;
+    justify-content: center;
   }
 }
 
@@ -79,6 +81,11 @@
   line-height: 136%;
   letter-spacing: 0.03em;
   color: $primary-bg-color;
+
+  @include for-size(tablet-landscape) {
+    font-size: 26px;
+    line-height: 130%;
+  }
 
   @include for-size(desktop) {
     font-size: 46px;
@@ -94,6 +101,11 @@
   line-height: 1.25;
   letter-spacing: 0.08em;
   color: $primary-bg-color;
+
+  @include for-size(tablet-landscape) {
+    font-size: 14px;
+    line-height: 1.21;
+  }
 
   @include for-size(desktop) {
     font-size: 30px;
@@ -115,11 +127,13 @@
   letter-spacing: 0.03em;
   color: $button-text-color;
 
+  transition: border $transition-duration $timing-function;
+
   &::placeholder {
     color: $button-text-color;
   }
 
-  @include for-size(tablet) {
+  @include for-size(tablet-landscape) {
     width: 390px;
     height: 48px;
   }
@@ -134,31 +148,14 @@
   margin-bottom: 50px;
 }
 
-.form-button {
-  width: 260px;
+.form-email:hover,
+.form-tel:hover,
+.form-email:focus,
+.form-tel:focus {
+  border: 1px solid $accent-color;
+  outline: none;
+}
 
-  height: 48px;
-  padding: 14px 1px;
-  border: 2px solid transparent;
-  cursor: pointer;
-
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.25;
-
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-
-  background-color: $accent-color;
-  color: $button-text-color;
-
-  @include for-size(desktop) {
-    width: 354px;
-    height: 70px;
-    padding: 26px 1px;
-
-    font-size: 14px;
-    line-height: 1.21;
-    letter-spacing: 0.14em;
-  }
+.form .button {
+  border: none;
 }

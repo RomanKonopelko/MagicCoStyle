@@ -14,23 +14,25 @@
 
       <input
         class="form-email"
-        type="email"
+        type="text"
+        name="name"
         placeholder="Имя*"
-        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        pattern="[A-Za-zА-Яа-яЁёІіЇїЄє]{2,20}"
+        title="Поле должно содержать только буквы латинского, русского или украинского алфавита"
         required
       />
+
       <input
         class="form-tel"
         type="tel"
         name="telephone"
         id="telephone"
         placeholder="Телефон*"
-        pattern="[0-9]{10}"
+        pattern="[0-9]"
+        title="Поле должно содержать только цифры"
         required
       />
-      <button type="submit" class="form-button button">
-        хочу на бесплатное занятие
-      </button>
+      <button type="submit" class="button">хочу на бесплатное занятие</button>
     </form>
   </div>
 </div>
