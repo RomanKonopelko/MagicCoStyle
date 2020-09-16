@@ -7,25 +7,51 @@
   padding-bottom: 357px;
   padding-right: 20px;
 
+  letter-spacing: 0.03em;
   background: #111518;
 
   @include for-size(tablet and tablet-landscape) {
-    padding-top: 60px;
+    padding: 60px;
     padding-right: 158px;
     padding-bottom: 176px;
     padding-left: 42px;
   }
 
+  @include for-size(desktop) {
+    padding-top: 100px;
+    padding-right: 631px;
+    padding-bottom: 282px;
+    padding-left: 183px;
+
+    background-image: url('../images/icons/campfirebig.svg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+
   &-title {
     color: white;
+    margin-bottom: 27px;
+    @include for-size(tablet and tablet-landscape) {
+      font-size: 26px;
+    }
+    @include for-size(desktop) {
+      font-size: 46px;
+      line-height: 130%;
+    }
   }
 }
 
 .counter {
   position: absolute;
-  padding-right: 20px;
+  right: 20px;
+  left: 20px;
   @include for-size(tablet and tablet-landscape) {
-    padding-right: 40px;
+    right: 40px;
+    left: 40px;
+  }
+  @include for-size(desktop) {
+    right: 183px;
+    left: 183px;
   }
 }
 
@@ -34,11 +60,14 @@
 
   padding-top: 20px;
   padding-right: 14px;
-  padding-left: 20px;
+  padding-left: 30px;
   padding-bottom: 20px;
 
+  font-size: 14px;
   line-height: 1.42;
+  font-weight: 700;
   letter-spacing: 0.08em;
+  color: $secondary-text-color;
 
   background-color: #ffffff;
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
@@ -46,26 +75,17 @@
   &-items:not(:last-child) {
     margin-bottom: 10px;
   }
-}
 
-.problem-list-items::before {
-  counter-increment: section;
-
-  content: '0' counter(section);
-  color: $accent-color;
-  display: flex;
-}
-
-.problem-list {
   @include for-size(tablet and tablet-landscape) {
     display: flex;
     flex-wrap: wrap;
     padding-left: 96px;
     padding-top: 30px;
-    justify-content: space-between;
 
     &-items {
       width: calc((100% - 22px) / 2);
+      justify-content: space-between;
+      margin-bottom: 0;
     }
   }
   @include for-size(desktop) {
@@ -75,12 +95,41 @@
 
     padding-top: 70px;
     padding-left: 114px;
-    padding-bottom: 95px;
-    padding-right: 114px;
+    padding-bottom: 62px;
+    padding-right: 112px;
+
+    font-size: 18px;
+    line-height: 1.4;
 
     &-items {
       width: calc((100% - 40px) / 3);
-      margin-bottom: 30px;
+      margin-bottom: 0px;
     }
   }
+}
+
+// розмітка для ліній і списку через "лічильник //
+
+.orange-line::before {
+  content: '';
+  position: absolute;
+  border-bottom: 2px solid $accent-color;
+  height: 10px;
+  width: 20px;
+  @include for-size(desktop) {
+    height: 12px;
+  }
+}
+
+.orange-line::after {
+  counter-increment: section;
+  left: 27px;
+  content: '0' counter(section);
+  color: $accent-color;
+  position: relative;
+  font-weight: 700;
+}
+
+.orange-line {
+  padding-bottom: 10px;
 }
