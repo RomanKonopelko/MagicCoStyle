@@ -67,8 +67,6 @@ p {
   padding-left: 20px;
   padding-right: 20px;
 
-
-
   @include for-size(tablet-portrait) {
     width: 320px;
   }
@@ -129,6 +127,7 @@ p {
     line-height: 1.4;
   }
 }
+
 // додає ccent-color на тескст //
 .accent-color {
   color: $accent-color;
