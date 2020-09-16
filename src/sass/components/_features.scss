@@ -40,7 +40,7 @@
 }
 
 .features-icon-wrap {
-  position: relative;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,15 +70,18 @@
 
 .features-icon {
   fill: $accent-color;
-  height: 50px;
+  height: 40px;
+
+  @include for-size(desktop) {
+    height: 47px;
+  }
 }
 
 .features-parapraph {
   display: inline-block;
-  margin: 0 0 0 15px;
+  padding-left: 74px;
 
   @include for-size(desktop) {
-    margin: 0 0 0 0;
     padding-left: 82px;
   }
 }
