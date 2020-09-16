@@ -36,6 +36,28 @@
   &:focus {
     color: $accent-color;
   }
+
+}
+
+.nav-items.mobile-items>a {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #ffffff;
+
+  @include for-size(tablet-landscape) {
+
+    font-size: 26px;
+
+  }
+
+
+  &:hover,
+  &:focus,
+  &:focus {
+    color: $accent-color;
+  }
+
 }
 
 
@@ -116,6 +138,8 @@
 
 .mobile.enumeration {
   margin-bottom: 50px;
+
+
 }
 
 .icon-close {
