@@ -1,4 +1,11 @@
 .header .button {
+  display: none;
+
+  @include for-size(tablet-landscape) {
+    display: block;
+
+  }
+
   // Size
   padding-top: 14px;
   padding-bottom: 14px;
@@ -23,7 +30,7 @@
 
   //  Effects
   transition: color $timing-function $transition-duration,
-    background-color $timing-function $transition-duration;
+  background-color $timing-function $transition-duration;
 
   &:hover {
     color: #ffffff;
@@ -90,4 +97,71 @@
     letter-spacing: 0.14em;
     text-transform: uppercase;
   }
+}
+
+.menu-button {
+  outline: none;
+  padding: 0px;
+  background-color: transparent;
+  border: none;
+
+
+  &.is-open .icon-menu {
+    display: none
+  }
+
+
+  @include for-size(desktop) {
+    display: none;
+
+  }
+
+}
+
+.button-menu {
+
+  display: block;
+  // Size
+  padding-top: 14px;
+  padding-bottom: 14px;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include for-size(tablet-portrait) {
+    max-width: 260px;
+
+  }
+
+  // Visual
+  border: 2px solid $accent-color;
+  background-color: transparent;
+  color: $accent-color;
+
+  // Text
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  // Reset
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+
+  //  Effects
+  transition: color $timing-function $transition-duration,
+  background-color $timing-function $transition-duration;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $accent-color;
+  }
+
+  @include for-size(tablet-landscape) {
+    display: none;
+  }
+
+
 }
