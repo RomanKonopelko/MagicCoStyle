@@ -49,6 +49,7 @@
 // .main-paragraph-score {
 //   color: $accent-color;
 // }
+
 .hero {
   width: 100%;
   @include for-size(max-tablet) {
@@ -67,7 +68,7 @@
   letter-spacing: 0.08em;
   color: $title-text-color;
 }
-.container {
+.hero.container {
   @include for-size(max-desktop) {
     background-image: url('../images/pictures/hero-background.webp');
     @media screen and (min-device-pixel-ratio: 2),
