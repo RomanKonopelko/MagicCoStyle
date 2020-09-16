@@ -1,3 +1,141 @@
-// .footer {
-//   text-align: center;
-// }
+.footer {
+  text-align: center;
+
+  @include for-size(tablet-landscape) {
+    text-align: start;
+  }
+}
+
+.footer-page {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include for-size(tablet-landscape) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include for-size(desktop) {
+    justify-content: start;
+    padding-top: 52px;
+    padding-bottom: 53px;
+  }
+}
+
+.footer-logo-link {
+  display: block;
+  margin-bottom: 20px;
+
+  @include for-size(tablet-landscape) {
+    margin: 0;
+  }
+
+  @include for-size(desktop) {
+    margin-right: 290px;
+  }
+}
+
+.footer-logo {
+  max-width: 100%;
+  width: 84.12px;
+  height: 30px;
+
+  @include for-size(tablet-landscape) {
+    width: 128px;
+    height: 45px;
+  }
+}
+
+.footer-nav {
+  @include for-size(tablet-landscape) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.footer-tel {
+  display: inline-flex;
+  margin-bottom: 30px;
+  justify-content: center;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+
+  color: $title-text-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  @include for-size(tablet-landscape) {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  @include for-size(desktop) {
+    font-size: 30px;
+    line-height: 1.23;
+  }
+}
+
+.footer-tel::after {
+  @include for-size(tablet-landscape) {
+    content: '';
+
+    margin-right: 24px;
+    margin-left: 24px;
+    height: 40px;
+
+    border: 1px solid $primary-text-color;
+
+    @include for-size(desktop) {
+      margin-right: 24px;
+      margin-left: 16px;
+    }
+  }
+}
+
+.footer-icon-call {
+  margin-right: 10px;
+
+  justify-content: center;
+  vertical-align: middle;
+
+  max-width: 100%;
+  width: 20px;
+  height: 19.21px;
+
+  fill: $accent-color;
+
+  @include for-size(desktop) {
+    margin-right: 15px;
+
+    width: 24px;
+    height: 23.06px;
+  }
+}
+
+// футер копирайт
+.footer-copyright {
+  background: $secondary-bg-color;
+
+  @include for-size(tablet-landscape) {
+    text-align: start;
+  }
+}
+
+.footer-copyright-text {
+  padding-top: 21px;
+  padding-bottom: 21px;
+
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: normal;
+}
