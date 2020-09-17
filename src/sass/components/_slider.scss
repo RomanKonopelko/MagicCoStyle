@@ -116,17 +116,14 @@
   border: 1px solid $accent-color;
 }
 
-.slider__item.slick-center {
-}
-
 .slider-item {
   display: flex;
   width: 1090px;
   height: 370px;
   padding: 50px;
   margin: 0 auto;
-  border: 2px solid $accent-color;
-  box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 }
 
 .slider-item-content-box {
