@@ -3,10 +3,7 @@ jQuery(document).ready(function ($) {
     dots: false,
     infinite: true,
     speed: 300,
-    centerMode: true,
-    focusOnSelect: true,
     slidesToShow: 1,
-    asNavFor: '.thumbnail-slider',
     responsive: [
       {
         breakpoint: 1440,
@@ -36,6 +33,7 @@ jQuery(document).ready(function ($) {
   });
   $('.thumbnail-slider').slick({
     slidesToShow: 7,
+    draggable: false,
     infinite: true,
     asNavFor: '.slider',
     dots: false,

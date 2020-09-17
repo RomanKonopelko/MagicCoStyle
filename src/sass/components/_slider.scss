@@ -21,6 +21,10 @@
   align-items: flex-start;
 }
 
+.slick-active:focus {
+  outline: none;
+}
+
 .thumbnail-slider-area {
   margin-top: 40px;
   margin-left: auto;
@@ -43,7 +47,10 @@
 }
 
 /* Стрелка */
-.slick-arrow {
+.slick-arrow:focus,
+.slick-arrow:hover {
+  outline: none;
+  color: seagreen;
 }
 /* Стрелка влево */
 .slick-arrow.slick-prev {
@@ -53,15 +60,6 @@
 }
 /* Стрелка не активная */
 .slick-arrow.slick-disabled {
-}
-
-/* Точки */
-.slick-dots {
-}
-.slick-dots li {
-}
-.slick-dots:nth-child(1) {
-  color: red;
 }
 
 /* Конкретный слайдер */
@@ -93,6 +91,7 @@
   background: url(../images/icons/arrow-left.svg) 0 0 no-repeat;
   background-position: 50%;
 }
+
 .slider .slick-arrow.slick-next {
   right: 5%;
   background: url(../images/icons/arrow-right.svg) 0 0 no-repeat;
@@ -102,16 +101,6 @@
   opacity: 0.2;
 }
 
-.slider .slick-dots {
-  display: flex;
-  margin-top: 40px;
-  align-items: center;
-  justify-content: center;
-}
-.slider .slick-dots li {
-  list-style: none;
-  margin: 0px 10px;
-}
 .slider .slick-dots button {
   font-size: 0;
   width: 54px;
@@ -178,4 +167,10 @@
   width: 150px;
   height: 150px;
   margin-bottom: 25px;
+}
+
+.social-list-icon {
+  width: 40px;
+  height: 20px;
+  fill: $accent-color;
 }
