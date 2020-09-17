@@ -48,7 +48,7 @@
 }
 .slick-dots li {
 }
-.slick-dots button:nth-child(1) {
+.slick-dots:nth-child(1) {
   color: red;
 }
 
@@ -56,7 +56,6 @@
 .slider {
   position: relative;
   padding: 0px 24px;
-
   @include for-size(tablet) {
     padding: 0px 27px;
   }
@@ -69,7 +68,7 @@
 .slider .slick-arrow {
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(0%, -50%);
   z-index: 10;
   font-size: 0;
   border: none;
@@ -106,8 +105,9 @@
   height: 54px;
   background-color: #fff;
   border-radius: 50%;
-  background-image: url(../images/pictures/client-1.png);
-  background-position: center;
+  //   background-image: url(../images/pictures/client-1.png);
+  //   background-position: center;
+  // }
 }
 
 .slider .slick-dots li.slick-active button {
@@ -115,19 +115,16 @@
   border: 1px solid $accent-color;
 }
 
-.slider__item {
-  padding: 0px 15px;
-  margin-bottom: 40px;
-}
-.slider__item img {
-  max-width: 100%;
-}
 .slider__item.slick-center {
 }
 
 .slider-item {
   display: flex;
+  width: 1090px;
+  height: 370px;
+  padding: 50px;
   margin: 0 auto;
+  box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
 }
 
 .slider-item-content-box {
