@@ -24,10 +24,9 @@
   display: flex;
   align-items: center;
   z-index: 1;
-  width: calc(100% - 100px);
-
+  width: 100%;
   @include for-size(tablet-landscape) {
-    width: calc((100% - 80px) / 3);
+    width: calc(100% / 3);
   }
 
   &:not(:last-child) {
