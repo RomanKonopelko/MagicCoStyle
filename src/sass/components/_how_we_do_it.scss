@@ -10,27 +10,58 @@
   margin-top: 0px;
   margin-bottom: 30px;
   text-align: center;
-
-  @include for-size(desktop) {
-    margin-bottom: 50px;
-  }
-}
-
-.methods {
-  cursor: pointer;
-
-  @include for-size(desktop) {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -10px;
-  }
-
-  &-item {
-    padding-top: 30px;
-    padding-bottom: 22px;
+  .description .common-title {
+    margin-top: 0px;
+    margin-bottom: 30px;
     text-align: center;
-    box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
-    transition: background-color $timing-function $transition-duration;
+    >>>>>>>origin/fixing-issues @include for-size(desktop) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .methods {
+    cursor: pointer;
+
+    @include for-size(tablet-landscape) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -10px;
+
+      @include for-size(desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px;
+      }
+    }
+
+    &-item {
+      padding-top: 30px;
+      padding-bottom: 22px;
+      text-align: center;
+      box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+      transition: background-color $timing-function $transition-duration;
+
+      @include for-size(tablet-landscape) {
+        max-width: calc(50% - 20px);
+        margin: 10px;
+        padding-top: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      @include for-size(desktop) {
+        max-width: calc((100% - 60px) / 3);
+        margin: 10px;
+        padding-top: 40px;
+        padding-bottom: 55px;
+      }
+    }
+
+    &-item:not(:last-child) {
+      @include for-size(max-tablet) {
+        margin-bottom: 15px;
+      }
+    }
 
     &-item-container {
       margin-bottom: 20px;
@@ -47,11 +78,10 @@
       transition: fill $timing-function $transition-duration;
     }
 
-    @include for-size(desktop) {
-      max-width: calc((100% - 60px) / 3);
-      margin: 10px;
-      padding-top: 40px;
-      padding-bottom: 55px;
+    &-item-title {
+      margin: 0px;
+      margin-bottom: 15px;
+      transition: color $timing-function $transition-duration;
     }
   }
 
@@ -103,21 +133,28 @@
 .methods-item:focus {
   background-color: $accent-color;
 
-  & .methods-item-image {
-    fill: #ffffff;
-  }
-
-  & .methods-item-image {
-    fill: #ffffff;
-    // --color1: #ffffff;
-    // --color2: #ffffff;
-  }
-
-  & .methods-item-descr {
-    color: #ffffff;
-  }
-
+  & .methods-item-title,
+  & .methods-item-image,
+  & .methods-item-descr,
   & .methods-item-decor {
-    background-color: #ffffff;
+    color: #ffffff;
+    fill: #ffffff;
   }
+
+  // & .methods-item-title {
+  //     color: #ffffff;
+  // }
+
+  // & .methods-item-image {
+  //     fill: #ffffff;
+
+  // }
+
+  // & .methods-item-descr {
+  //     color: #ffffff;
+  // }
+
+  // & .methods-item-decor {
+  //     background-color: #ffffff;
+  // }
 }
