@@ -1,26 +1,23 @@
-.section.explanation {
-  padding-top: 280px;
+.section-first.explanation {
+    padding-top: 198px;
+
+    @include for-size(desktop) {
+        padding-top: 280px;
+    }
 }
 
-.container .description {
-  margin-top: 0px;
-  margin-bottom: 30px;
-  text-align: center;
-
-  @include for-size(tablet-landscape) {
+.container .common-title {
+    margin-top: 0px;
+    margin-bottom: 30px;
     text-align: center;
-  }
 
-  @include for-size(desktop) {
-    margin-bottom: 50px;
-  }
+    @include for-size(desktop) {
+        margin-bottom: 50px;
+    }
 }
 
 .methods {
-  @include for-size(tablet-landscape) {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -10px;
+    cursor: pointer;
 
     @include for-size(desktop) {
       display: flex;
@@ -36,12 +33,20 @@
     box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
     transition: background-color $timing-function $transition-duration;
 
-    @include for-size(tablet-landscape) {
-      max-width: calc(50% - 20px);
-      margin: 10px;
-      padding-top: 40px;
-      padding-left: 30px;
-      padding-right: 30px;
+    &-item-container {
+        margin-bottom: 20px;
+
+        @include for-size(tablet-landscape) {
+            margin-bottom: 30px;
+        }
+    }
+
+
+    &-item-image {
+        width: 80px;
+        height: 48px;
+        fill: $accent-color;
+        transition: fill $timing-function $transition-duration;
     }
 
     @include for-size(desktop) {
@@ -104,9 +109,11 @@
     fill: #ffffff;
   }
 
-  & .methods-item-title {
-    color: #ffffff;
-  }
+    & .methods-item-image {
+        fill: #ffffff;
+        // --color1: #ffffff;
+        // --color2: #ffffff;
+    }
 
   & .methods-item-descr {
     color: #ffffff;
