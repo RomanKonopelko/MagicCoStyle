@@ -1,51 +1,49 @@
 .our-program {
   position: relative;
-  padding-bottom: 537px;
+  padding-bottom: 500px;
   width: auto;
   background-color: $secondary-bg-color;
-  background-image: url('../images/pictures/mobile/main-mobile.jpg');
+  background-image: url('../images/pictures/mobile/main-mobile.png');
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: 75%;
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background-image: url('../images/pictures/mobile/main-mobile@2x.jpg');
+    background-image: url('../images/pictures/mobile/main-mobile@2x.png');
   }
   @media screen and (min-device-pixel-ratio: 3),
     screen and (min-resolution: 288dpi),
     screen and (min-resolution: 3dppx) {
-    background-image: url('../images/pictures/mobile/main-mobile@3x.jpg');
+    background-image: url('../images/pictures/mobile/main-mobile@3x.png');
   }
-  @include for-size(tablet-portrait) {
-    padding-bottom: 392px;
-    background-image: url('../images/pictures/tablet/main-tablet.jpg');
+  @include for-size(tablet-landscape) {
+    background-image: url('../images/pictures/tablet/main-tablet.png');
     background-position-y: 75%;
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url('../images/pictures/tablet/main-tablet@2x.jpg');
+      background-image: url('../images/pictures/tablet/main-tablet@2x.png');
     }
     @media screen and (min-device-pixel-ratio: 3),
       screen and (min-resolution: 288dpi),
       screen and (min-resolution: 3dppx) {
-      background-image: url('../images/pictures/tablet/main-tablet@3x.jpg');
+      background-image: url('../images/pictures/tablet/main-tablet@3x.png');
     }
   }
   @include for-size(desktop) {
-    padding-bottom: 375px;
-    background-image: url('../images/pictures/desktop/main-desktop.jpg');
+    background-image: url('../images/pictures/desktop/main-desktop.png');
     background-position-x: left;
-    background-position-y: 90%;
+    background-position-y: 85%;
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url('../images/pictures/desktop/main-desktop@2x.jpg');
+      background-image: url('../images/pictures/desktop/main-desktop@2x.png');
     }
     @media screen and (min-device-pixel-ratio: 3),
       screen and (min-resolution: 288dpi),
       screen and (min-resolution: 3dppx) {
-      background-image: url('../images/pictures/desktop/main-desktop@3x.jpg');
+      background-image: url('../images/pictures/desktop/main-desktop@3x.png');
     }
   }
 
@@ -68,7 +66,7 @@
   margin-bottom: 45px;
   text-align: center;
   color: #ffffff;
-  @include for-size(tablet-portrait) {
+  @include for-size(tablet-landscape) {
     text-align: left;
   }
   @include for-size(desktop) {
@@ -76,6 +74,7 @@
   }
 }
 .program-list {
+  counter-reset: section;
   margin-left: 120px;
   @include for-size(desktop) {
     display: flex;
@@ -89,7 +88,7 @@
   flex-direction: column;
   // width: 100%;
   margin-bottom: 40px;
-  @include for-size(tablet-portrait) {
+  @include for-size(tablet-landscape) {
     margin-bottom: 0;
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -109,7 +108,7 @@
     width: 1px;
     height: calc(100% + 40px);
     background-color: #ffffff;
-    @include for-size(tablet-portrait) {
+    @include for-size(tablet-landscape) {
       left: -57px;
     }
     @include for-size(desktop) {
@@ -126,7 +125,7 @@
     height: 12px;
     border-radius: 50%;
     background-color: $accent-color;
-    @include for-size(tablet-portrait) {
+    @include for-size(tablet-landscape) {
       left: -62px;
     }
     @include for-size(desktop) {
@@ -145,6 +144,10 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #ffffff;
+  &::before {
+    counter-increment: section;
+    content: counter(section) ' Семестр';
+  }
   @include for-size(desktop) {
     font-size: 20px;
     line-height: 1.4;
@@ -176,7 +179,7 @@
   }
 }
 .program-chapters {
-  @include for-size(tablet-portrait) {
+  @include for-size(tablet-landscape) {
     display: flex;
   }
   @include for-size(desktop) {
@@ -185,22 +188,21 @@
 }
 .program-sublist {
   width: calc(100%);
-  @include for-size(tablet-portrait) {
+  @include for-size(tablet-landscape) {
     width: calc((100% - 50px * 2) / 3);
   }
-  // @include for-size(desktop) {
-  //   width: calc((100% - 30px * 4) / 5);
-  // }
+  @include for-size(desktop) {
+    width: 100%;
+  }
 }
 .program-sublist:not(:last-child) {
   margin-bottom: 8px;
-  @include for-size(tablet-portrait) {
+  @include for-size(tablet-landscape) {
     margin-bottom: 0;
     margin-right: 50px;
   }
 }
 .program-subitem {
-  width: max-content;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.67;
