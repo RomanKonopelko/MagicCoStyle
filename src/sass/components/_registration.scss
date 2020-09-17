@@ -1,19 +1,11 @@
 .registration {
-  max-width: 1680px;
-  height: 507px;
   text-align: center;
 
   background-color: $secondary-bg-color;
   background-image: url(../images/pictures/mobile/form-mobile.png);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-
-  .container {
-    @include for-size(desktop) {
-      padding-left: 183px;
-      padding-right: 183px;
-    }
-  }
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -28,7 +20,6 @@
   }
 
   @include for-size(tablet-landscape) {
-    height: 520px;
     background-image: url(../images/pictures/tablet/form-tablet.png);
 
     @media screen and (min-device-pixel-ratio: 2),
@@ -45,9 +36,8 @@
   }
 
   @include for-size(desktop) {
-    height: 840px;
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
     background-image: url(../images/pictures/desktop/form-desktop.png);
 
     @media screen and (min-device-pixel-ratio: 2),
@@ -73,7 +63,7 @@
   }
 }
 
-.form-title {
+.registration-title {
   margin-bottom: 30px;
 
   font-weight: 800;
@@ -93,7 +83,7 @@
   }
 }
 
-.form-paragraph {
+.registration-paragraph {
   margin-bottom: 30px;
 
   font-weight: 600;
@@ -131,6 +121,11 @@
 
   &::placeholder {
     color: $button-text-color;
+  }
+
+  @include for-size(tablet-portrait) {
+    width: 280px;
+    height: 48px;
   }
 
   @include for-size(tablet-landscape) {
