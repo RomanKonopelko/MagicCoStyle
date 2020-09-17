@@ -1,58 +1,27 @@
 // спільні стилі для двох секції з лічильником //
 
 .problem {
-  position: relative;
-
-  padding-top: 50px;
-  padding-bottom: 357px;
-  padding-right: 20px;
-
-  letter-spacing: 0.03em;
   background: #111518;
 
-  @include for-size(tablet and tablet-landscape) {
-    padding: 60px;
-    padding-right: 158px;
-    padding-bottom: 176px;
-    padding-left: 42px;
-  }
-
   @include for-size(desktop) {
-    padding-top: 100px;
-    padding-right: 631px;
-    padding-bottom: 282px;
-    padding-left: 183px;
-
     background-image: url('../images/icons/campfirebig.svg');
     background-repeat: no-repeat;
     background-position: right bottom;
   }
-
   &-title {
     color: white;
-    margin-bottom: 27px;
-    @include for-size(tablet and tablet-landscape) {
-      font-size: 26px;
-    }
+    margin-bottom: 25px;
     @include for-size(desktop) {
-      font-size: 46px;
-      line-height: 130%;
+      margin-bottom: 70px;
     }
+  }
+  &-container {
+    position: relative;
   }
 }
 
-.counter {
+.problem-wrap {
   position: absolute;
-  right: 20px;
-  left: 20px;
-  @include for-size(tablet and tablet-landscape) {
-    right: 40px;
-    left: 40px;
-  }
-  @include for-size(desktop) {
-    right: 183px;
-    left: 183px;
-  }
 }
 
 .problem-list {
@@ -63,9 +32,6 @@
   padding-left: 30px;
   padding-bottom: 20px;
 
-  font-size: 14px;
-  line-height: 1.42;
-  font-weight: 700;
   letter-spacing: 0.08em;
   color: $secondary-text-color;
 
@@ -79,13 +45,13 @@
   @include for-size(tablet and tablet-landscape) {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 96px;
-    padding-top: 30px;
+    // padding-left: 96px;
+    // padding-top: 30px;
 
     &-items {
       width: calc((100% - 22px) / 2);
       justify-content: space-between;
-      margin-bottom: 0;
+      // margin-bottom: 0;
     }
   }
   @include for-size(desktop) {
@@ -94,12 +60,7 @@
     justify-content: space-between;
 
     padding-top: 70px;
-    padding-left: 114px;
     padding-bottom: 62px;
-    padding-right: 112px;
-
-    font-size: 18px;
-    line-height: 1.4;
 
     &-items {
       width: calc((100% - 40px) / 3);
@@ -110,26 +71,37 @@
 
 // розмітка для ліній і списку через "лічильник //
 
-.orange-line::before {
+.problem-list-items {
+  position: relative;
+  padding-top: 10px;
+}
+
+.problem-list-items::before {
   content: '';
-  position: absolute;
+
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
   border-bottom: 2px solid $accent-color;
   height: 10px;
   width: 20px;
+  margin-bottom: 18px;
+
   @include for-size(desktop) {
     height: 12px;
   }
 }
 
-.orange-line::after {
-  counter-increment: section;
-  left: 27px;
+.problem-list-items::after {
   content: '0' counter(section);
-  color: $accent-color;
-  position: relative;
-  font-weight: 700;
-}
+  counter-increment: section;
 
-.orange-line {
-  padding-bottom: 10px;
+  position: absolute;
+
+  top: 9px;
+  left: 27px;
+
+  color: $accent-color;
+  font-weight: 700;
 }
