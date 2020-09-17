@@ -61,6 +61,7 @@
   display: inline-flex;
   margin-bottom: 30px;
   justify-content: center;
+  align-items: center;
 
   font-weight: 600;
   font-size: 14px;
@@ -72,6 +73,13 @@
   &:focus {
     color: $accent-color;
   }
+
+  &:hover .footer-icon-call,
+  &:focus .footer-icon-call {
+    fill: inherit;
+  }
+
+  transition: color $transition-duration $timing-function;
 
   @include for-size(tablet-landscape) {
     margin-bottom: 0;
@@ -110,16 +118,35 @@
 
   max-width: 100%;
   width: 20px;
-  height: 19.21px;
+  height: 20px;
 
   fill: $accent-color;
+
+  transition: fill $transition-duration $timing-function;
+
+  @include for-size(tablet-landscape) {
+    width: 24px;
+    height: 23px;
+  }
 
   @include for-size(desktop) {
     margin-right: 15px;
 
-    width: 24px;
-    height: 23.06px;
+    width: 30px;
+    height: 28px;
   }
+}
+
+.footer-instagram::after {
+  content: '';
+  display: inline-block;
+  max-width: 100%;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icons/instagram.svg');
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 // футер копирайт
