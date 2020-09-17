@@ -213,3 +213,10 @@
     line-height: 1.56;
   }
 }
+
+//////////////////////////////
+.program-absolute {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+}
