@@ -146,7 +146,7 @@
   color: #ffffff;
   &::before {
     counter-increment: section;
-    content: counter(section) ' Семестр';
+    content: counter(section) ' ';
   }
   @include for-size(desktop) {
     font-size: 20px;
@@ -214,9 +214,22 @@
   }
 }
 
-//////////////////////////////
+// Абсолютная секция
 .program-absolute {
   position: absolute;
   bottom: 0;
-  transform: translateY(50%);
+  transform: translateY(40%);
+}
+.chosen {
+  width: 50%;
+  margin-bottom: 30px;
+  background-color: transparent;
+  color: #ffffff;
+  @include for-size(tablet-landscape) {
+    width: 100%;
+    text-align: center;
+  }
+  @include for-size(desktop) {
+    display: none;
+  }
 }
