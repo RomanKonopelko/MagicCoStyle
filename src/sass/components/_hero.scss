@@ -49,7 +49,7 @@
 // .main-paragraph-score {
 //   color: $accent-color;
 // }
-.container {
+.hero-container {
   @include for-size(max-desktop) {
     background-image: url('../images/pictures/hero-background.webp');
     @media screen and (min-device-pixel-ratio: 2),
@@ -63,8 +63,6 @@
       background-image: url('../images/pictures/hero-background@3x.webp');
     }
   }
-}
-.hero-container {
   @include for-size(tablet-landscape) {
     display: flex;
   }
