@@ -8,7 +8,7 @@
 
 }
 
-.guaranties .common-title {
+.guaranties {
     margin-top: 0px;
     margin-bottom: 30px;
     text-align: center;
@@ -19,6 +19,8 @@
     font-size: 12px;
     line-height: 1.66;
     color: $secondary-text-color;
+
+    text-align: left;
 
     @include for-size(max-tablet) {
         padding-top: 30px;

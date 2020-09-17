@@ -110,6 +110,8 @@
   background-color: transparent;
   border: none;
 
+  cursor: pointer;
+
   @include for-size(tablet-landscape) {
     right: 40px;
   }
