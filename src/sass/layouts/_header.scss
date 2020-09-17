@@ -130,7 +130,7 @@
 
   background: rgba(17, 21, 24, 0.9);
   transform: translateY(-100%);
-  transition: transform 600ms $transition-duration;
+  transition: transform 800ms $transition-duration;
 
 
 
@@ -157,11 +157,14 @@
 
 }
 
-.mobile.enumeration {
+.mobile-list {
+
+  margin-bottom: 50px;
+
   @include for-size(tablet-landscape) {
     display: inline-block;
     text-align: left;
-    margin-bottom: 50px;
+
   }
 
 
