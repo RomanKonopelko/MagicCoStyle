@@ -103,10 +103,8 @@
   }
 }
 
-.form-email,
-.form-tel {
+.form-input {
   width: 100%;
-  margin-bottom: 20px;
   padding: 15px 28px;
   border: 1px solid $button-text-color;
   background-color: transparent;
@@ -143,12 +141,61 @@
   margin-bottom: 50px;
 }
 
-.form-email:hover,
-.form-tel:hover,
-.form-email:focus,
-.form-tel:focus {
+.form-input:hover,
+.form-input:focus {
   border: 1px solid $accent-color;
   outline: none;
+}
+
+// Animation for input
+
+.form-email-field {
+  position: relative;
+  margin-bottom: 30px;
+}
+.form-tel-field {
+  position: relative;
+}
+
+.form-label {
+  position: absolute;
+
+  @include for-size(max-desktop) {
+    top: 40%;
+    left: 40px;
+    transform: translateY(-30%);
+    transition: transform 250ms linear;
+  }
+
+  @include for-size(desktop) {
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    transition: transform 250ms linear;
+  }
+}
+
+.tel-label {
+  @include for-size(max-desktop) {
+    top: 20%;
+  }
+
+  @include for-size(desktop) {
+    top: 30%;
+  }
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  color: $accent-color;
+
+  @include for-size(max-desktop) {
+    transform: translate(-40px, -40px);
+  }
+
+  @include for-size(desktop) {
+    transform: translate(-40px, -60px);
+  }
 }
 
 .form .button {
