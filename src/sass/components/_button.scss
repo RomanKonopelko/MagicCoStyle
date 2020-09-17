@@ -102,8 +102,8 @@
 // Button for mobile menu
 
 .menu-button {
-  position: absolute;
-  right: 20px;
+  // position: absolute;
+  // right: 20px;
   margin-left: 40px;
   outline: none;
   padding: 0px;
@@ -111,16 +111,17 @@
   border: none;
 
   cursor: pointer;
-
-  @include for-size(tablet-landscape) {
-    right: 40px;
-  }
-
   z-index: 6;
+  // @include for-size(tablet-landscape) {
+  //   right: 40px;
+  // }
+
+
 
 
   & .icon-close {
     display: none;
+
   }
 
   &.is-open .icon-menu {
@@ -129,6 +130,8 @@
 
   &.is-open .icon-close {
     display: block;
+
+
   }
 
   @include for-size(desktop) {
@@ -136,9 +139,7 @@
   }
 
   &:hover .icon-close,
-  &:hover .icon-menu,
-  &:focus .icon-close,
-  &:focus .icon-menu {
+  &:hover .icon-menu {
     fill: $accent-color;
   }
 }
