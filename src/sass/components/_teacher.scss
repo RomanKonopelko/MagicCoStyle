@@ -1,17 +1,15 @@
-.teacher {
-  outline: 2px solid red;
+// .teacher {
+//   outline: 2px solid red;
+//   padding-top: 270px;
 
-  padding-bottom: 50px;
+//   @include for-size(tablet-landscape) {
+//     padding-top: 302px;
+//   }
 
-  @include for-size(tablet-landscape) {
-    padding-top: 302px;
-  }
-
-  @include for-size(desktop) {
-    padding-top: 329px;
-    padding-bottom: 130px;
-  }
-}
+//   @include for-size(desktop) {
+//     padding-top: 329px;
+//   }
+// }
 
 .teacher-title {
   margin-bottom: 20px;
@@ -36,13 +34,26 @@
   }
 }
 
+.teacher-picture {
+  @include for-size(tablet-landscape) {
+    flex-shrink: 0;
+    width: 35.3%;
+  }
+
+  @include for-size(desktop) {
+    width: 40.35%;
+  }
+}
+
 .teacher-summary {
   @include for-size(tablet-landscape) {
     margin-left: 40px;
+    width: 65%;
   }
 
   @include for-size(desktop) {
     margin-left: 30px;
+    width: 49%;
   }
 }
 
@@ -140,6 +151,7 @@
 
 .teacher-icon-check {
   margin-right: 9px;
+  flex-shrink: 0;
   max-width: 100%;
   width: 17.08px;
   height: 14px;
