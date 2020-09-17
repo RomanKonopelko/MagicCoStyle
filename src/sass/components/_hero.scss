@@ -64,7 +64,7 @@
     }
   }
 }
-.hero-conteiner {
+.hero-container {
   @include for-size(tablet-landscape) {
     display: flex;
   }
@@ -133,7 +133,7 @@
 .main-paragraph-score {
   color: $accent-color;
 }
-.button-conteiner {
+.button-container {
   @include for-size(max-tablet) {
     text-align: center;
   }
