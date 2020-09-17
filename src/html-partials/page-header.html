@@ -4,7 +4,7 @@
       <a class="logo-link" href="#">
         <span class="logo-link"></span>
       </a>
-      <nav>
+      <nav class="main-nav">
         <ul class="nav enumeration">
           <li class="nav-items">
             <a href="#program">Программы обучения</a>
@@ -18,34 +18,33 @@
       </nav>
       <button class="button">Консультация по телефону</button>
       <button type="button" class="menu-button" data-menu-button aria-expanded="false">
-        <svg class="button-menu-icon" width="40" height="40">
+        <svg class="button-menu-icon" width="29" height="29">
           <use class="icon-menu" href="./images/icons/sprite.svg#icon-menu-btn"> </use>
+          <use class="icon-close" href="./images/icons/sprite.svg#icon-menu-btn-closed"> </use>
         </svg>
       </button>
-      <nav class="mobile-menu" data-menu>
-        <div class="mobile-flex-container">
-          <a class="logo-link" href="#">
-            <span class="logo-link-menu"></span>
-          </a>
-          <button type="button" class="menu-button" data-menu-button aria-expanded="false">
-            <svg class="button-menu-icon" width="40" height="40">
-              <use class="icon-close" href="./images/icons/sprite.svg#icon-menu-btn-closed"> </use>
-            </svg>
-          </button>
-        </div>
-        <ul class="mobile enumeration">
-          <li class="nav-items mobile-items">
-            <a href="#program">Программы обучения</a>
-          </li>
-          <li class="nav-items mobile-items"><a href="#about">О нас</a></li>
-          <li class="nav-items mobile-items">
-            <a href="#learningoptions">Варианты обучения</a>
-          </li>
-          <li class="nav-items mobile-items"><a href="ourcontacts">Контакты</a></li>
-        </ul>
-        <button class="button-menu">Консультация по телефону</button>
+      <div class="mobile-menu" data-menu>
+        <nav class="nav-menu container">
+          <div class="mobile-flex-container">
+            <a class="logo-link" href="#">
+              <span class="logo-link-menu"></span>
+            </a>
+            </button>
+          </div>
+          <ul class="mobile enumeration">
+            <li class="nav-items mobile-items">
+              <a href="#program">Программы обучения</a>
+            </li>
+            <li class="nav-items mobile-items"><a href="#about">О нас</a></li>
+            <li class="nav-items mobile-items">
+              <a href="#learningoptions">Варианты обучения</a>
+            </li>
+            <li class="nav-items mobile-items"><a href="ourcontacts">Контакты</a></li>
+          </ul>
+          <button class="button-menu">Консультация по телефону</button>
+        </nav>
+      </div>
 
-      </nav>
     </div>
     <script src="./mobile.js"></script>
   </header>
