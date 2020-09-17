@@ -17,6 +17,7 @@
 }
 
 .methods {
+    cursor: pointer;
 
     @include for-size(tablet-landscape) {
         display: flex;
@@ -118,6 +119,8 @@
 
     & .methods-item-image {
         fill: #ffffff;
+        // --color1: #ffffff;
+        // --color2: #ffffff;
     }
 
     & .methods-item-title {
