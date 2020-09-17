@@ -20,6 +20,8 @@
     line-height: 1.66;
     color: $secondary-text-color;
 
+    text-align: left;
+
     @include for-size(max-tablet) {
         padding-top: 30px;
         padding-bottom: 30px;
