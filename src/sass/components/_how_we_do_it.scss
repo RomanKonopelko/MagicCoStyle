@@ -38,7 +38,7 @@
         box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
         transition: background-color $timing-function $transition-duration,
             transform $timing-function $transition-duration;
-        ;
+
 
         @include for-size(tablet-landscape) {
             max-width: calc(50% - 20px);
