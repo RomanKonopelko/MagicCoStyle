@@ -1,0 +1,179 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 50px 50px;
+  z-index: 6;
+
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  opacity: 1;
+  transition: opacity $timing-function $transition-duration;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.modal {
+  background-color: #fff;
+
+  @include for-size(tablet-portrait) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    max-width: 450px;
+    width: 100%;
+
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  @include for-size(desktop) {
+    min-width: 528px;
+    min-height: 450px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.form-call-to-action {
+  display: block;
+  margin-bottom: 50px;
+
+  font-family: $primary-font-family;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $title-text-color;
+}
+
+.modal-form {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 40px;
+
+  color: $title-text-color;
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  margin-top: 8px;
+  margin-right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $accent-color;
+  border-radius: 50%;
+  cursor: pointer;
+
+  background-color: $accent-color;
+  color: $button-text-color;
+
+  transition: color $transition-duration $timing-function,
+    background-color $transition-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $button-text-color;
+    color: $accent-color;
+  }
+}
+
+.icon-close {
+  fill: currentColor;
+}
+
+.btn-position {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-input {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 15px 28px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  transition: border $transition-duration $timing-function;
+
+  @include for-size(tablet-portrait) {
+    height: 48px;
+  }
+
+  @include for-size(desktop) {
+    width: 450px;
+    height: 70px;
+  }
+}
+
+.modal-input:hover,
+.modal-input:focus {
+  border: 1px solid $accent-color;
+  outline: none;
+}
+
+// Animation
+.modal-field {
+  position: relative;
+}
+
+.modal-label {
+  position: absolute;
+  color: $primary-text-color;
+
+  @include for-size(max-desktop) {
+    top: 25%;
+    left: 40px;
+    transform: translateY(-30%);
+    transition: transform 250ms linear;
+  }
+
+  @include for-size(desktop) {
+    top: 35%;
+    left: 40px;
+    transform: translateY(-50%);
+    transition: transform 250ms linear;
+  }
+}
+
+.modal-input:focus + .modal-label,
+.modal-input:not(:placeholder-shown) + .modal-label {
+  color: $accent-color;
+
+  @include for-size(max-desktop) {
+    transform: translate(-40px, -40px);
+  }
+
+  @include for-size(desktop) {
+    transform: translate(-40px, -60px);
+  }
+}
+
+.form-btn-thumb {
+  text-align: center;
+}
+
+.form-btn {
+  min-width: 200px;
+  padding: 15px 15px;
+}
