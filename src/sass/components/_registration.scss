@@ -159,12 +159,21 @@
 
 .form-label {
   position: absolute;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.08em;
+  color: $button-text-color;
 
   @include for-size(max-desktop) {
     top: 40%;
     left: 40px;
     transform: translateY(-30%);
     transition: transform 250ms linear;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 767.9px) {
+    left: 120px;
   }
 
   @include for-size(desktop) {
