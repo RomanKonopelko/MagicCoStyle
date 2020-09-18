@@ -63,16 +63,22 @@
       background-image: url('../images/pictures/hero-background@3x.webp');
     }
   }
+  @include for-size(max-tablet) {
+    text-align: center;
+  }
   @include for-size(tablet-landscape) {
+    position: relative;
     display: flex;
   }
 }
 .hero-main {
   @include for-size(max-desktop) {
-    max-width: 332px;
+    display: inline-block;
+    max-width: 275px;
+    text-align: left;
   }
   @include for-size(desktop) {
-    max-width: 642px;
+    max-width: 608px;
   }
   @include for-size(max-desktop) {
     & :not(:last-child) {
@@ -150,6 +156,9 @@
 }
 .main-image {
   @include for-size(tablet-landscape) {
+    position: absolute;
+  }
+  @include for-size(tablet-landscape) {
     width: 100%;
   }
   @include for-size(max-tablet) {
@@ -158,9 +167,12 @@
     text-align: center;
   }
   @media screen and (min-width: 768px) and (max-width: 1439.9px) {
-    min-width: 376px;
+    position: absolute;
+    left: calc(100% - 394px);
+    max-width: 376px;
   }
   @include for-size(desktop) {
-    max-width: 842px;
+    left: calc(100% - 770px);
+    max-width: 735px;
   }
 }
