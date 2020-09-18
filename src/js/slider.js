@@ -2,9 +2,10 @@ jQuery(document).ready(function ($) {
   $('.slider').slick({
     dots: false,
     variableWidth: true,
+    adaptiveHeight: false,
     infinite: true,
     speed: 300,
-    adaptiveHeight: true,
+    mobileFirst: true,
     slidesToShow: 1,
     centerMode: true,
     responsive: [
@@ -12,7 +13,6 @@ jQuery(document).ready(function ($) {
         breakpoint: 768,
         settings: {
           adaptiveHeight: true,
-          variableWidth: true,
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: false,
@@ -21,7 +21,8 @@ jQuery(document).ready(function ($) {
     ],
   });
   $('.thumbnail-slider').slick({
-    slidesToShow: 3,
+    adaptiveWidth: false,
+    slidesToShow: 7,
     slidesToScroll: 1,
     arrows: false,
     draggable: false,
@@ -30,12 +31,12 @@ jQuery(document).ready(function ($) {
     dots: false,
     centerMode: true,
     focusOnSelect: true,
-    mobileFirst: true,
+
     responsive: [
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 7,
+          slidesToShow: 3,
           slidesToScroll: 1,
           arrows: false,
           draggable: false,
