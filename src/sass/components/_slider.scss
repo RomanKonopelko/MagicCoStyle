@@ -111,7 +111,7 @@
 
 .slider .slick-arrow {
   position: absolute;
-  top: 113%;
+  top: 109%;
   transform: translate(0%, -50%);
   z-index: 10;
   font-size: 0;
@@ -165,9 +165,19 @@
   display: flex;
   flex-flow: column;
   text-align: center;
-  width: 382px;
   padding: 20px;
 
+  @include for-size(phone-only) {
+    width: 215px;
+  }
+
+  @include for-size(min-mobile) {
+    width: 330px;
+  }
+
+  @include for-size(tablet-portrait) {
+    width: 380px;
+  }
   @include for-size(tablet-landscape) {
     flex-flow: row;
     align-items: flex-start;

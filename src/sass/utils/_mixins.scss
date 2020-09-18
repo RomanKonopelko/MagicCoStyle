@@ -11,6 +11,7 @@
 }
 
 @mixin for-size($range) {
+  $min-mobile: 320px;
   $mobile: 480px;
   $tablet: 768px;
   $desktop: 1440px;
@@ -19,6 +20,10 @@
 
   @if $range == phone-only {
     @media (max-width: #{$mobile - 1}) {
+      @content;
+    }
+  } @else if $range == min-mobile {
+    @media (min-width: $min-mobile) {
       @content;
     }
   } @else if $range == tablet-portrait {

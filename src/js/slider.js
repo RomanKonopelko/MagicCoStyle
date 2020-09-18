@@ -14,6 +14,7 @@ jQuery(document).ready(function ($) {
         breakpoint: 768,
         settings: {
           asNavFor: false,
+          adaptiveWidth: true,
           adaptiveHeight: true,
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -29,6 +30,7 @@ jQuery(document).ready(function ($) {
     arrows: false,
     draggable: false,
     infinite: true,
+    itemWidth: 500,
     asNavFor: '.slider',
     dots: false,
     centerMode: true,
