@@ -1,60 +1,55 @@
 .block-guaranties {
-
-    @include for-size(max-tablet) {
-        margin-left: auto;
-        margin-right: auto;
-        background-color: #F1F1F1;
-    }
-
+  @include for-size(max-tablet) {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f1f1f1;
+  }
 }
 
 .guaranties {
-    margin-top: 0px;
-    margin-bottom: 30px;
-    text-align: center;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .list-guaranties {
-    background-color: #F1F1F1;
-    font-size: 12px;
-    line-height: 1.66;
-    color: $secondary-text-color;
+  background-color: #f1f1f1;
+  font-size: 12px;
+  line-height: 1.66;
+  color: $secondary-text-color;
 
-    text-align: left;
+  text-align: left;
 
-    @include for-size(max-tablet) {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        padding-left: 35px;
+  @include for-size(max-tablet) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 35px;
+  }
 
+  @include for-size(tablet-landscape) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 118px;
+    padding-right: 50px;
+    background-color: #f1f1f1;
+  }
 
-    }
+  @include for-size(desktop) {
+    padding-top: 50px;
+    padding-bottom: 45px;
+    padding-left: 164px;
+    padding-right: 112px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
 
-    @include for-size(tablet-landscape) {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        padding-left: 118px;
-        padding-right: 50px;
-        background-color: #F1F1F1;
-    }
+  & li:not(:last-child) {
+    margin-bottom: 23px;
 
     @include for-size(desktop) {
-        padding-top: 50px;
-        padding-bottom: 45px;
-        padding-left: 164px;
-        padding-right: 112px;
-        font-size: 20px;
-        line-height: 1.4;
+      margin-bottom: 20px;
     }
-
-    & li:not(:last-child) {
-        margin-bottom: 23px;
-
-        @include for-size(desktop) {
-            margin-bottom: 20px;
-        }
-
-    }
+  }
 }
 
 // .position {
@@ -62,49 +57,73 @@
 // }
 
 .item-guaranties {
-    position: relative;
+  position: relative;
 }
 
 .item-guaranties:not(:last-child)::before {
-    content: "";
-    position: absolute;
-    left: -28px;
-    top: 25px;
-    border-left: 1px dashed $primary-text-color;
-    height: 50px;
+  content: '';
+  position: absolute;
+  left: -28px;
+  top: 25px;
+  border-left: 1px dashed $primary-text-color;
+  height: 50px;
 
-    @include for-size(tablet-landscape) {
-        left: -32px;
-        height: 30px;
-    }
+  @include for-size(tablet-landscape) {
+    left: -32px;
+    height: 30px;
+  }
 
-    @include for-size(desktop) {
-        left: -37px;
-        height: 40px;
-    }
+  @include for-size(desktop) {
+    left: -37px;
+    height: 40px;
+  }
 }
 
 .item-guaranties::after {
-    content: "";
-    width: 15px;
-    height: 20px;
-    position: absolute;
-    left: -34px;
-    top: 0%;
-    background-image: url(../images/icons/fire-color.svg);
+  content: '';
+  width: 15px;
+  height: 20px;
+  position: absolute;
+  left: -34px;
+  top: 0%;
+  background-image: url(../images/icons/fire-color.svg);
 
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
 
+  @include for-size(tablet-landscape) {
+    left: -38px;
+  }
 
-    @include for-size(tablet-landscape) {
-        left: -38px;
+  @include for-size(desktop) {
+    left: -45px;
+    width: 22px;
+    height: 30px;
+    background-size: cover;
+  }
+  background-position: bottom;
+}
+.item-guaranties:hover {
+  //   cursor: default;
+  &::after {
+    animation-name: fire;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+  }
+}
+@keyframes fire {
+  from {
+    background-size: 0;
+  }
+  50% {
+    background-size: 100%;
+  }
 
-    }
-
-    @include for-size(desktop) {
-        left: -45px;
-        width: 22px;
-        height: 30px;
-        background-size: cover;
-    }
+  51% {
+    background-size: 100%;
+  }
+  to {
+    background-size: 0;
+  }
 }
