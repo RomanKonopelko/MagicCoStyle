@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  // outline: 2px solid red;
+  outline: 2px solid red;
 }
 
 body {
@@ -67,7 +67,7 @@ p {
   padding-left: 20px;
   padding-right: 20px;
 
-  @include for-size(max-tablet) {
+  @include for-size(tablet-portrait) {
     width: 480px;
   }
 
