@@ -75,7 +75,7 @@
   @include for-size(max-desktop) {
     display: inline-block;
     max-width: 275px;
-    // text-align: left;
+    text-align: left;
   }
   @include for-size(desktop) {
     max-width: 608px;
