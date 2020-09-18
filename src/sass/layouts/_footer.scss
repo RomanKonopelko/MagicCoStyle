@@ -135,6 +135,14 @@
     width: 30px;
     height: 28px;
   }
+
+  animation: footer-icon-call 0.9s ease-in-out infinite;
+}
+
+@keyframes footer-icon-call {
+  45% {
+    transform: rotate(-55deg);
+  }
 }
 
 .footer-instagram::after {

@@ -95,8 +95,21 @@
   display: flex;
   align-items: flex-start;
 
+  transition: color $transition-duration $timing-function;
+
   &:not(:last-child) {
     margin-bottom: 30px;
+  }
+
+  &:hover .teacher-page,
+  &:focus .teacher-page {
+    color: $accent-color;
+  }
+
+  &:hover .teacher-icon-check,
+  &:focus .teacher-icon-check {
+    fill: $title-text-color;
+    width: 30px;
   }
 }
 
@@ -107,6 +120,8 @@
   letter-spacing: 0.06em;
 
   color: $title-text-color;
+
+  transition: color $transition-duration $timing-function;
 
   @include for-size(desktop) {
     font-size: 16px;
@@ -128,6 +143,24 @@
   }
 }
 
+.teacher-icon-check {
+  margin-right: 9px;
+  flex-shrink: 0;
+  max-width: 100%;
+  width: 17px;
+  height: 14px;
+
+  fill: $accent-color;
+  transition: fill $transition-duration $timing-function,
+    width $transition-duration $timing-function;
+
+  @include for-size(desktop) {
+    margin-right: 35px;
+    width: 24.41px;
+    height: 20px;
+  }
+}
+
 .teacher-point {
   letter-spacing: normal;
 
@@ -145,21 +178,5 @@
 
   @include for-size(desktop) {
     margin-top: 20px;
-  }
-}
-
-.teacher-icon-check {
-  margin-right: 9px;
-  flex-shrink: 0;
-  max-width: 100%;
-  width: 17.08px;
-  height: 14px;
-
-  fill: $accent-color;
-
-  @include for-size(desktop) {
-    margin-right: 35px;
-    width: 24.41px;
-    height: 20px;
   }
 }
