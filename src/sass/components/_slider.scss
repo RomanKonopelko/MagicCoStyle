@@ -7,7 +7,7 @@
 
 .slider {
   margin: 0 auto;
-  box-shadow: 0px 6px 28px rgba(241, 219, 193, 0.493);
+  box-shadow: 0px 6px 28px rgba(49, 48, 47, 0.158);
 }
 .slick-slider {
   min-width: 0;
@@ -42,6 +42,7 @@
 }
 .col.slick-slide {
   height: 70px;
+  cursor: pointer;
 }
 
 .slick-slide {
