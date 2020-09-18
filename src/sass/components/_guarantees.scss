@@ -56,3 +56,55 @@
 
     }
 }
+
+// .position {
+//     position: relative;
+// }
+
+.item-guaranties {
+    position: relative;
+}
+
+.item-guaranties:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: -28px;
+    top: 25px;
+    border-left: 1px dashed $primary-text-color;
+    height: 50px;
+
+    @include for-size(tablet-landscape) {
+        left: -32px;
+        height: 30px;
+    }
+
+    @include for-size(desktop) {
+        left: -37px;
+        height: 40px;
+    }
+}
+
+.item-guaranties::after {
+    content: "";
+    width: 15px;
+    height: 20px;
+    position: absolute;
+    left: -34px;
+    top: 0%;
+    background-image: url(../images/icons/fire-color.svg);
+
+    background-repeat: no-repeat;
+
+
+    @include for-size(tablet-landscape) {
+        left: -38px;
+
+    }
+
+    @include for-size(desktop) {
+        left: -45px;
+        width: 22px;
+        height: 30px;
+        background-size: cover;
+    }
+}
