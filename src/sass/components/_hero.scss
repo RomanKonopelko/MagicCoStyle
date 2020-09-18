@@ -52,75 +52,94 @@
 .hero-container {
   @include for-size(max-desktop) {
     background-image: url('../images/pictures/hero-background.webp');
+
     @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
       background-image: url('../images/pictures/hero-background@2x.webp');
     }
+
     @media screen and (min-device-pixel-ratio: 3),
-      screen and (min-resolution: 288dpi),
-      screen and (min-resolution: 3dppx) {
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
       background-image: url('../images/pictures/hero-background@3x.webp');
     }
   }
+
   @include for-size(tablet-landscape) {
     display: flex;
   }
 }
+
 .hero-main {
   @include for-size(max-desktop) {
     max-width: 332px;
   }
+
   @include for-size(desktop) {
     max-width: 642px;
   }
+
   @include for-size(max-desktop) {
     & :not(:last-child) {
       margin-bottom: 30px;
     }
   }
+
   @include for-size(max-tablet) {
     margin-bottom: 30px;
   }
+
   color: $title-text-color;
 }
+
 .main-title {
   @include for-size(desktop) {
     margin-bottom: 24px;
   }
+
   color: $title-text-color;
   font-weight: 800;
+
   @include for-size(max-tablet) {
     font-size: 20px;
     line-height: 1.35;
   }
+
   @media screen and (min-width: 768px) and (max-width: 1439.9px) {
     font-size: 26px;
     line-height: 1.3;
   }
+
   @include for-size(desktop) {
     font-size: 58px;
     line-height: 1.29;
   }
+
   letter-spacing: 0.03em;
 }
+
 .main-paragraph {
   font-weight: 700;
+
   @include for-size(max-desktop) {
     font-size: 14px;
     line-height: 1.57;
   }
+
   @include for-size(desktop) {
     margin-bottom: 40px;
     font-size: 20px;
     line-height: 1.65;
   }
 }
+
 .main-paragraph-text {
   @include for-size(max-desktop) {
     color: $primary-text-color;
     font-weight: 500;
   }
+
   @include for-size(desktop) {
     color: $primary-text-color;
     font-weight: 500;
@@ -128,19 +147,23 @@
     line-height: 1.65;
   }
 }
+
 .main-paragraph-score {
   color: $accent-color;
 }
+
 .button-container {
   @include for-size(max-tablet) {
     text-align: center;
   }
 }
+
 .button.hero-button {
   @include for-size(max-desktop) {
     padding-right: 1px;
     padding-left: 1px;
   }
+
   @include for-size(desktop) {
     padding: 26px;
     font-size: 14px;
@@ -148,18 +171,22 @@
     letter-spacing: 0.14em;
   }
 }
+
 .main-image {
   @include for-size(tablet-landscape) {
     width: 100%;
   }
+
   @include for-size(max-tablet) {
     display: inline-block;
     max-width: 208px;
     text-align: center;
   }
+
   @media screen and (min-width: 768px) and (max-width: 1439.9px) {
     min-width: 376px;
   }
+
   @include for-size(desktop) {
     max-width: 842px;
   }
