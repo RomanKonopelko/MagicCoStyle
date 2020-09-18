@@ -118,25 +118,13 @@
     & .methods-item-title,
     & .methods-item-image,
     & .methods-item-descr,
-    & .methods-item-decor {
+        {
         color: #ffffff;
         fill: #ffffff;
     }
 
-    // & .methods-item-title {
-    //     color: #ffffff;
-    // }
 
-    // & .methods-item-image {
-    //     fill: #ffffff;
-
-    // }
-
-    // & .methods-item-descr {
-    //     color: #ffffff;
-    // }
-
-    // & .methods-item-decor {
-    //     background-color: #ffffff;
-    // }
+    & .methods-item-decor {
+        background-color: #ffffff;
+    }
 }

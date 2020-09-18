@@ -73,6 +73,9 @@
   outline: none;
   text-decoration: none;
 
+  display: inline-block;
+  text-align: center;
+
   // Effects
   transition: color $timing-function $transition-duration,
     background-color $timing-function $transition-duration,
