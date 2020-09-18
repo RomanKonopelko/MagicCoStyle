@@ -65,7 +65,9 @@
       background-image: url('../images/pictures/hero-background@3x.webp');
     }
   }
-
+  @include for-size(max-tablet) {
+    text-align: center;
+  }
   @include for-size(tablet-landscape) {
     position: relative;
     display: flex;
