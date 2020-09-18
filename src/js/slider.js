@@ -39,7 +39,7 @@ jQuery(document).ready(function ($) {
         breakpoint: 768,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 3,
           arrows: false,
           draggable: false,
           infinite: true,

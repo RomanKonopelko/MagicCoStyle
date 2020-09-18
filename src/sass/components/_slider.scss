@@ -27,10 +27,10 @@
 }
 
 .thumbnail-slider-area {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 100%;
   overflow: hidden;
 
   @include for-size(tablet-landscape) {
@@ -41,7 +41,7 @@
   }
 }
 .col.slick-slide {
-  height: 70px;
+  height: 75px;
   cursor: pointer;
 }
 
@@ -55,11 +55,16 @@
   width: 54px;
   outline: none;
   border-radius: 50%;
-  box-shadow: 0 0 1pt 1pt $accent-color;
+  box-shadow: 0 0 2pt 1pt $accent-color;
+  transition: transform $transition-duration $timing-function;
 
   &:hover,
   &:focus {
-    transform: scale(1.2);
+    transform: scale(1.3);
+  }
+
+  &:active {
+    transform: scale(0.8);
   }
 }
 
@@ -114,6 +119,10 @@
   border: none;
   width: 100px;
   height: 10%;
+
+  &.skick-arrow:hover,
+  &.slick-arrow:focus {
+  }
 
   @include for-size(tablet-landscape) {
     top: 50%;
