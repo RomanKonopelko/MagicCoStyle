@@ -5,6 +5,7 @@ jQuery(document).ready(function ($) {
     adaptiveHeight: false,
     infinite: true,
     speed: 300,
+    asNavFor: '.thumbnail-slider',
     mobileFirst: true,
     slidesToShow: 1,
     centerMode: true,
@@ -12,6 +13,7 @@ jQuery(document).ready(function ($) {
       {
         breakpoint: 768,
         settings: {
+          asNavFor: false,
           adaptiveHeight: true,
           slidesToShow: 1,
           slidesToScroll: 1,
