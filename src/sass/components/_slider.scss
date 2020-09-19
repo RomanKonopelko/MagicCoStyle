@@ -136,7 +136,7 @@
   position: absolute;
   top: 107%;
   transform: translate(0%, -50%);
-  z-index: 10;
+  z-index: 1;
   font-size: 0;
   cursor: pointer;
   border: none;
@@ -173,12 +173,14 @@
   }
 
   @include for-size(tablet-landscape) {
-    left: -8%;
+    left: 0;
     background-color: transparent;
+    background-position: 15%;
   }
 
   @include for-size(desktop) {
     left: 0%;
+    background-position: 50%;
   }
 }
 
@@ -193,12 +195,14 @@
   }
 
   @include for-size(tablet-landscape) {
-    right: -8%;
+    right: 0%;
     background-color: transparent;
+    background-position: 85%;
   }
 
   @include for-size(desktop) {
     right: 0%;
+    background-position: 50%;
   }
 }
 .slider .slick-arrow.slick-disabled {
