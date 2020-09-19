@@ -29,7 +29,7 @@
 
   //  Анимация
   transition: color $timing-function $transition-duration,
-  background-color $timing-function $transition-duration;
+    background-color $timing-function $transition-duration;
 
   &:hover {
     color: #ffffff;
@@ -155,13 +155,13 @@
   }
 }
 
-.mobile-menu+.menu-button .icon-menu {
+.mobile-menu + .menu-button .icon-menu {
   visibility: visible;
   opacity: 1;
   transition: opacity 2000ms $timing-function;
 }
 
-.mobile-menu+.menu-button .icon-close {
+.mobile-menu + .menu-button .icon-close {
   visibility: hidden;
   opacity: 0;
   fill: #ffffff;
@@ -171,18 +171,17 @@
   fill: $accent-color;
 }
 
-.mobile-menu.is-open+.menu-button .icon-menu {
+.mobile-menu.is-open + .menu-button .icon-menu {
   visibility: hidden;
   opacity: 0;
 }
 
-.mobile-menu.is-open+.menu-button .icon-close {
+.mobile-menu.is-open + .menu-button .icon-close {
   visibility: visible;
   display: block;
   opacity: 1;
   // fill: #ffffff;
   transition: opacity 2000ms $timing-function;
-
 }
 
 // Button inside mobile-menu
@@ -192,7 +191,7 @@
   // Позиционирование и геометрия
   padding-top: 14px;
   padding-bottom: 14px;
-  max-width: 100%;
+  max-width: 260px;
   margin-right: auto;
   margin-left: auto;
 
@@ -211,6 +210,7 @@
   line-height: 1.25;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-align: center;
 
   // Reset
   cursor: pointer;
@@ -219,7 +219,7 @@
 
   //  Анимация
   transition: color $timing-function $transition-duration,
-  background-color $timing-function $transition-duration;
+    background-color $timing-function $transition-duration;
 
   &:hover {
     color: #ffffff;
@@ -245,17 +245,12 @@
   right: 10px;
   z-index: 1000;
 
-  transition: fill .3s,
-    opacity .2s,
-    visibility .2s,
-    transform .9s;
+  transition: fill 0.3s, opacity 0.2s, visibility 0.2s, transform 0.9s;
   opacity: 0;
   visibility: hidden;
-
 }
 
 #button.show {
-
   opacity: 1;
   visibility: visible;
 
