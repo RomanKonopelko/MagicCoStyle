@@ -1,5 +1,10 @@
 .section-teacher {
-  padding-top: 270px;
+  @media screen and (max-width: 359px) {
+    padding-top: calc(13% + 270px);
+  }
+  @media screen and (min-width: 360px) and (max-width: 767.9px){
+    padding-top: 270px;
+  }
 
   @include for-size(tablet-landscape) {
     padding-top: 302px;
