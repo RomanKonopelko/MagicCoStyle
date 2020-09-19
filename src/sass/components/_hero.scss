@@ -51,6 +51,7 @@
 // }
 
 .hero-container {
+<<<<<<< Updated upstream
   background-image: url('../images/pictures/hero-background.webp');
 
   @media screen and (min-device-pixel-ratio: 2),
@@ -63,6 +64,41 @@
     screen and (min-resolution: 288dpi),
     screen and (min-resolution: 3dppx) {
     background-image: url('../images/pictures/hero-background@3x.webp');
+=======
+  @include for-size(min-mobile) {
+    background-image: url('../images/pictures/hero-background.webp');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/pictures/hero-background@2x.webp');
+    }
+
+    @media screen and (min-device-pixel-ratio: 3),
+      screen and (min-resolution: 288dpi),
+      screen and (min-resolution: 3dppx) {
+      background-image: url('../images/pictures/hero-background@3x.webp');
+    }
+    @include for-size(max-desktop) {
+      background-size: 768px 557px;
+    }
+    background-repeat: no-repeat;
+  }
+  @include for-size(max-tablet) {
+    background-position-x: -50px;
+    background-position-y: 30px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1439.9px) {
+    height: 507px;
+    background-position-x: 0px;
+    background-position-y: -54px;
+  }
+  @include for-size(desktop) {
+    background-size: 1440px 878px;
+    height: 878px;
+    background-position-x: -27px;
+    background-position-y: 40px;
+>>>>>>> Stashed changes
   }
   background-size: cover;
 
