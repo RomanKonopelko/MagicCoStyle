@@ -2,7 +2,7 @@
   @media screen and (max-width: 359px) {
     padding-top: calc(13% + 270px);
   }
-  @media screen and (min-width: 360px) and (max-width: 767.9px){
+  @media screen and (min-width: 360px) and (max-width: 767.9px) {
     padding-top: 270px;
   }
 
@@ -96,6 +96,22 @@
   }
 }
 
+.teacher-list::after {
+  content: '';
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 20px;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: $accent-color;
+
+  @include for-size(desktop) {
+    width: 23px;
+  }
+}
+
 .teacher-link {
   display: flex;
   align-items: flex-start;
@@ -113,8 +129,9 @@
 
   &:hover .teacher-icon-check,
   &:focus .teacher-icon-check {
-    fill: $title-text-color;
     width: 30px;
+
+    fill: $title-text-color;
   }
 }
 
@@ -134,23 +151,10 @@
   }
 }
 
-.teacher-border {
-  display: block;
-
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.65;
-  color: $accent-color;
-
-  @include for-size(desktop) {
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-}
-
 .teacher-icon-check {
-  margin-right: 9px;
   flex-shrink: 0;
+  margin-right: 9px;
+
   max-width: 100%;
   width: 17px;
   height: 14px;
@@ -161,6 +165,7 @@
 
   @include for-size(desktop) {
     margin-right: 35px;
+
     width: 24.41px;
     height: 20px;
   }
