@@ -46,15 +46,17 @@
 }
 
 .col.slick-slide.slick-slide.slick-center img {
-  box-shadow: 0 0 2pt 1pt $accent-color;
-  border-radius: 50%;
+  @include for-size(max-tablet) {
+    box-shadow: 0 0 2pt 1pt $accent-color;
+    border-radius: 50%;
+  }
 }
-
 .col.slick-slide.slick-slide.slick-current img {
-  box-shadow: 0 0 2pt 1pt $accent-color;
-  border-radius: 50%;
+  @include for-size(max-tablet) {
+    box-shadow: 0 0 2pt 1pt $accent-color;
+    border-radius: 50%;
+  }
 }
-
 .col.slick-slide.slick-slide.slick-center {
   @media screen and (max-width: 340px) {
     width: 74px !important;

@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
     variableWidth: true,
     adaptiveHeight: false,
     infinite: true,
-    speed: 300,
+    speed: 1000,
     asNavFor: '.thumbnail-slider',
     mobileFirst: true,
     slidesToShow: 1,
