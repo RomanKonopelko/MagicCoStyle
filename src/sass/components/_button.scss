@@ -115,24 +115,35 @@
 
   cursor: pointer;
   z-index: 6;
+
   // @include for-size(tablet-landscape) {
   //   right: 40px;
   // }
-
-
+  & .icon-menu {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2000ms $timing-function;
+  }
 
 
   & .icon-close {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    fill: #ffffff;
 
   }
 
   &.is-open .icon-menu {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+
   }
 
   &.is-open .icon-close {
+    visibility: visible;
     display: block;
+    opacity: 1;
+    transition: opacity 1800ms $timing-function;
 
 
   }
@@ -192,3 +203,44 @@
     display: none;
   }
 }
+
+
+// Button UP
+
+#button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  margin: 30px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+
+  transition: background-color .3s,
+    opacity .5s,
+    visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#button.show {
+
+  opacity: 1;
+  visibility: visible;
+
+  & .icon-up {
+    fill: $primary-text-color;
+  }
+}
+
+#button:hover .icon-up {
+  cursor: pointer;
+  fill: $accent-color;
+}
+
+// #button:active {
+//   background-color: #555;
+// }
