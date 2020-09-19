@@ -21,6 +21,7 @@
 
   @include for-size(desktop) {
     justify-content: start;
+
     padding-top: 52px;
     padding-bottom: 53px;
   }
@@ -28,6 +29,7 @@
 
 .footer-logo-link {
   display: block;
+
   margin-bottom: 20px;
 
   @include for-size(tablet-landscape) {
@@ -59,6 +61,7 @@
 
 .footer-tel {
   display: inline-flex;
+
   margin-bottom: 30px;
   justify-content: center;
   align-items: center;
@@ -83,6 +86,7 @@
 
   @include for-size(tablet-landscape) {
     margin-bottom: 0;
+
     font-size: 20px;
     line-height: 1.2;
   }
@@ -99,6 +103,7 @@
 
     margin-right: 24px;
     margin-left: 24px;
+
     height: 40px;
 
     border: 1px solid $primary-text-color;
@@ -148,9 +153,11 @@
 .footer-instagram::after {
   content: '';
   display: inline-block;
+
   max-width: 100%;
   width: 40px;
   height: 40px;
+
   background-image: url('../images/icons/instagram.svg');
   background-size: 40px;
   background-repeat: no-repeat;
