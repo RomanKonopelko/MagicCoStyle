@@ -74,6 +74,17 @@
     position: absolute;
     width: 100px;
     height: 102px;
+    animation: mymove 5s ease-in-out infinite alternate;
+    @keyframes mymove {
+      from {
+        transform: rotate(0deg);
+        left: 0px;
+      }
+      to {
+        transform: rotate(360deg);
+        left: 400px;
+      }
+    }
   }
 
   &::before {
@@ -100,6 +111,23 @@
 
   @include for-size(desktop) {
     height: 47px;
+    animation: mymove 5s ease infinite alternate;
+    @keyframes mymove {
+      0% {
+        transform: rotate(0deg);
+        border-radius: 0%;
+        left: 0px;
+      }
+
+      50% {
+        border-radius: 50%;
+      }
+      100% {
+        transform: rotate(540deg);
+        border-radius: 0%;
+        left: 400px;
+      }
+    }
   }
 }
 
@@ -114,5 +142,14 @@
 
   @include for-size(desktop) {
     padding-left: 82px;
+    animation: textslide 5s ease-in-out infinite alternate;
+    @keyframes textslide {
+      from {
+        left: 0px;
+      }
+      to {
+        left: 400px;
+      }
+    }
   }
 }
