@@ -1,4 +1,4 @@
-.header .button {
+.primary .button {
   display: none;
 
   @include for-size(tablet-landscape) {
@@ -29,7 +29,7 @@
 
   //  Анимация
   transition: color $timing-function $transition-duration,
-    background-color $timing-function $transition-duration;
+  background-color $timing-function $transition-duration;
 
   &:hover {
     color: #ffffff;
@@ -155,13 +155,13 @@
   }
 }
 
-.mobile-menu + .menu-button .icon-menu {
+.mobile-menu+.menu-button .icon-menu {
   visibility: visible;
   opacity: 1;
   transition: opacity 2000ms $timing-function;
 }
 
-.mobile-menu + .menu-button .icon-close {
+.mobile-menu+.menu-button .icon-close {
   visibility: hidden;
   opacity: 0;
   fill: #ffffff;
@@ -171,12 +171,12 @@
   fill: $accent-color;
 }
 
-.mobile-menu.is-open + .menu-button .icon-menu {
+.mobile-menu.is-open+.menu-button .icon-menu {
   visibility: hidden;
   opacity: 0;
 }
 
-.mobile-menu.is-open + .menu-button .icon-close {
+.mobile-menu.is-open+.menu-button .icon-close {
   visibility: visible;
   display: block;
   opacity: 1;
@@ -219,7 +219,7 @@
 
   //  Анимация
   transition: color $timing-function $transition-duration,
-    background-color $timing-function $transition-duration;
+  background-color $timing-function $transition-duration;
 
   &:hover {
     color: #ffffff;
