@@ -87,7 +87,12 @@
 }
 .program-list {
   counter-reset: section;
-  margin-left: 120px;
+  @media screen and (max-width: 400px) {
+    margin-left: calc(100% - 65%);
+  }
+  @media screen and (min-width: 401px) {
+    margin-left: calc(100% - 59%);
+  }
   @include for-size(desktop) {
     display: flex;
     margin-left: 0;
