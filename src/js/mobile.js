@@ -13,17 +13,18 @@
 //   });
 // })();
 
-// (() => {
-//   const refs = {
-//     openMobileBtn: document.querySelector('[data-mobile-open]'),
-//     closeMobileBtn: document.querySelector('[data-mobile-close]'),
-//     mobile: document.querySelector('[data-mobile]'),
-//   };
+(() => {
+    const refs = {
+        openMobileBtn: document.querySelector('[data-mobile-open]'),
+        closeMobileBtn: document.querySelector('[data-mobile-close]'),
+        mobile: document.querySelector('[data-menu]'),
+    };
 
-//   refs.openMobileBtn.addEventListener('click', toggleMobile);
-//   refs.closeMobileBtn.addEventListener('click', toggleMobile);
+    refs.openMobileBtn.addEventListener('click', toggleMobile);
+    refs.closeMobileBtn.addEventListener('click', toggleMobile);
 
-//   function toggleMobile() {
-//     refs.mobile.classList.toggle('is-open');
-//   }
-// })();
+    function toggleMobile() {
+        refs.mobile.classList.toggle('is-open');
+
+    }
+})();

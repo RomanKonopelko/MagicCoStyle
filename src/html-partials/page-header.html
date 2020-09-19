@@ -17,47 +17,35 @@
         </ul>
       </nav>
       <button type="button" class="button">Консультация по телефону</button>
-      <button type="button" class="menu-button" data-mobile-open>
-        <svg class="button-menu-icon" width="29" height="29">
-          <use
-            class="icon-menu"
-            href="./images/icons/sprite.svg#icon-menu-btn"
-          ></use>
-          <use
-            class="icon-close"
-            href="./images/icons/sprite.svg#icon-menu-btn-closed"
-          ></use>
-        </svg>
-      </button>
-      <div class="mobile-menu mobile" data-menu>
-        <nav class="nav-menu container">
+      <div class="mobile-menu" data-menu>
+        <nav class="nav-menu container mobile">
           <div class="mobile-flex-container">
-            <a
-              class="logo-link"
-              href="./index.html"
-              aria-label="company logo"
-              data-mobile-close
-            >
+            <a type="button" class="logo-link" href="./index.html" aria-label="company logo">
               <span class="logo-link-menu"></span>
             </a>
           </div>
-          <ul class="mobile-list enumeration">
+          <ul class="mobile-list enumeration" data-mobile-close>
             <li class="nav-items mobile-items">
               <a href="#program">Программы обучения</a>
             </li>
-            <li class="nav-items mobile-items"><a href="#about">О нас</a></li>
+            <li class="nav-items mobile-items"><a href="#about" data-mobile-close>О нас</a></li>
             <li class="nav-items mobile-items">
-              <a href="#learningoptions">Варианты обучения</a>
+              <a href="#learningoptions" data-mobile-close>Варианты обучения</a>
             </li>
-            <li class="nav-items mobile-items">
-              <a href="ourcontacts">Контакты</a>
-            </li>
+            <li class="nav-items mobile-items"><a href="ourcontacts" data-mobile-close>Контакты</a></li>
           </ul>
           <button type="button" class="button-menu">
             Консультация по телефону
           </button>
         </nav>
       </div>
+      <button type="button" class="menu-button" data-mobile-open>
+        <svg class="button-menu-icon" width="29" height="29">
+          <use class="icon-menu" href="./images/icons/sprite.svg#icon-menu-btn"> </use>
+          <use class="icon-close" href="./images/icons/sprite.svg#icon-menu-btn-closed"> </use>
+        </svg>
+      </button>
+
     </div>
   </header>
 </section>
