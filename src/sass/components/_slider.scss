@@ -71,6 +71,7 @@
 .col img {
   width: 54px;
   height: 54px;
+  object-fit: cover;
   outline: none;
   border-radius: 50%;
   transition: transform $transition-duration $timing-function;
