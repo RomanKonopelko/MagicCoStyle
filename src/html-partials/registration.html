@@ -11,17 +11,32 @@
       С вами свяжется консультант и ответит на вопросы
     </p>
     <form class="form">
-      <div class="form-email-field">
-        <input class="form-input" id="email" type="text" name="name" placeholder=" "
+      <div class="form-field form-name">
+        <input
+          class="form-input"
+          id="name"
+          type="text"
+          name="name"
+          placeholder=" "
           pattern="[A-Za-zА-Яа-яЁёІіЇїЄє]{2,20}"
-          title="Поле должно содержать только буквы латинского, русского или украинского алфавита" required />
-        <label for="email" class="form-label">Имя*</label>
+          title="Поле должно содержать только буквы латинского, русского или украинского алфавита"
+          required
+        />
+        <label for="name" class="form-label">Имя*</label>
       </div>
 
-      <div class="form-tel-field">
-        <input class="form-input form-tel" type="tel" name="telephone" id="telephone" placeholder=" " pattern="[0-9]"
-          title="Поле должно содержать только цифры" required />
-        <label for="email" class="form-label tel-label">Телефон*</label>
+      <div class="form-field form-tel">
+        <input
+          class="form-input"
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder=" "
+          pattern="[0-9]"
+          title="Поле должно содержать только цифры"
+          required
+        />
+        <label for="phone" class="form-label tel-label">Телефон*</label>
       </div>
       <button type="submit" class="button">хочу на бесплатное занятие</button>
     </form>
