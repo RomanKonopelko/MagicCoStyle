@@ -5,17 +5,17 @@
     display: block;
   }
 
-  // Size
+  // Позиционирование и геометрия
   padding-top: 14px;
   padding-bottom: 14px;
   min-width: 260px;
 
-  // Visual
+  // Визуализация
   border: 2px solid $accent-color;
   background-color: transparent;
   color: $accent-color;
 
-  // Text
+  // Текст
   font-weight: bold;
   font-size: 12px;
   line-height: 1.25;
@@ -27,9 +27,9 @@
   outline: none;
   text-decoration: none;
 
-  //  Effects
+  //  Анимация
   transition: color $timing-function $transition-duration,
-  background-color $timing-function $transition-duration;
+    background-color $timing-function $transition-duration;
 
   &:hover {
     color: #ffffff;
@@ -41,7 +41,7 @@
     padding-bottom: 27px;
     min-width: 336px;
 
-    // Text
+    // Текст
     font-weight: bold;
     font-size: 14px;
     line-height: 1.22;
@@ -51,17 +51,17 @@
 }
 
 .button {
-  // Size
+  // Позиционирование и геометрия
   padding-top: 14px;
   padding-bottom: 14px;
   min-width: 260px;
 
-  // Visual
+  // Визуализация
   background-color: $accent-color;
   color: #ffffff;
   border: 2px solid transparent;
 
-  // Text
+  // Текст
   font-weight: bold;
   font-size: 12px;
   line-height: 1.25;
@@ -76,7 +76,7 @@
   display: inline-block;
   text-align: center;
 
-  // Effects
+  // Анимация
   transition: color $timing-function $transition-duration,
     background-color $timing-function $transition-duration,
     border $timing-function $transition-duration;
@@ -93,7 +93,7 @@
     padding-bottom: 27px;
     min-width: 354px;
 
-    // Text
+    // Текст
     font-weight: bold;
     font-size: 14px;
     line-height: 1.22;
@@ -102,7 +102,7 @@
   }
 }
 
-// Button for mobile menu
+// Кнопка для мобильного меню
 
 .menu-button {
   // position: absolute;
@@ -119,12 +119,8 @@
   //   right: 40px;
   // }
 
-
-
-
   & .icon-close {
     display: none;
-
   }
 
   &.is-open .icon-menu {
@@ -133,8 +129,6 @@
 
   &.is-open .icon-close {
     display: block;
-
-
   }
 
   @include for-size(desktop) {
@@ -147,11 +141,11 @@
   }
 }
 
-// Button inside mobile-menu
+// Кнопка в мобильном меню
 
 .button-menu {
   display: block;
-  // Size
+  // Позиционирование и геометрия
   padding-top: 14px;
   padding-bottom: 14px;
   max-width: 100%;
@@ -162,12 +156,12 @@
     max-width: 260px;
   }
 
-  // Visual
+  // Визуализация
   border: 2px solid $accent-color;
   background-color: transparent;
   color: $accent-color;
 
-  // Text
+  // Текст
   font-weight: bold;
   font-size: 12px;
   line-height: 1.25;
@@ -179,9 +173,9 @@
   outline: none;
   text-decoration: none;
 
-  //  Effects
+  //  Анимация
   transition: color $timing-function $transition-duration,
-  background-color $timing-function $transition-duration;
+    background-color $timing-function $transition-duration;
 
   &:hover {
     color: #ffffff;
