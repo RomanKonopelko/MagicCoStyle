@@ -24,6 +24,7 @@
     refs.closeMobileBtn.addEventListener('click', toggleMobile);
 
     function toggleMobile() {
+        document.body.classList.toggle("modal-open");
         refs.mobile.classList.toggle('is-open');
 
     }
