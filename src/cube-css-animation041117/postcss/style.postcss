@@ -1,0 +1,114 @@
+@use postcss-simple-vars;
+
+$size: 3rem;
+$delta: 100%;
+
+.wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+@keyframes move-cube {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0) scale(1);
+        opacity: 1;
+    }
+    /* RIGHT */
+    10% {
+        transform: translateX($delta) translateY(0) rotate(100deg) scale(1);
+        opacity: 1;
+    }
+    13% {
+        transform: translateX($delta) translateY(0) rotate(90deg) scale(1);
+        opacity: 1;
+    }
+    20% {
+        transform: translateX($delta) translateY(0) rotate(90deg) scale(1);
+        opacity: 1;
+    }
+    /* BOTTOM */
+    30% {
+        transform: translateX(0) translateY(calc($delta * .6)) rotate(-10deg) scale(.3);
+        opacity: 0;
+    }
+    40% {
+        transform: translateX(0) translateY(calc($delta * .6)) rotate(0) scale(.3);
+        opacity: 0;
+    }
+    /* TOP */
+    50% {
+        transform: translateX(calc(-$delta * .3)) translateY(calc(-$delta * 1.7)) rotate(150deg) scale(1.2);
+        opacity: .3;
+    }
+    55% {
+        transform: translateX(calc(-$delta * .5)) translateY(calc(-$delta * 2)) rotate(220deg) scale(1.2);
+        opacity: .5;
+    }
+    60% {
+        transform: translateX(calc(-$delta * .75)) translateY(calc(-$delta * 1.7)) rotate(270deg) scale(1.2);
+        opacity: .8;
+    }
+    /* LEFT */
+    70% {
+        transform: translateX(-$delta) translateY(0) rotate(360deg) scale(1);
+        opacity: 1;
+    }
+    73% {
+        transform: translateX(-$delta) translateY(calc($size * .1)) rotate(360deg) scaleX(1.2) scaleY(.8);
+        opacity: 1;
+    }
+    76% {
+        transform: translateX(-$delta) translateY(0) rotate(360deg) scale(1);
+        opacity: 1;
+    }
+    80% {
+        transform: translateX(-$delta) translateY(0) rotate(360deg) scale(1);
+        opacity: 1;
+    }
+    /* CENTER */
+    90% {
+        transform: translateX(0) translateY(0) rotate(460deg) scale(1);
+        opacity: 1;
+    }
+    93% {
+        transform: translateX(0) translateY(0) rotate(450deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0) translateY(0) rotate(450deg) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes change-background {
+    0% {
+        background: #06D6A0;
+    }
+    25% {
+        background: #26547C;
+    }
+    50% {
+        background: #EF476F;
+    }
+    75% {
+        background: #EFB134;
+    }
+    100% {
+        background: #06D6A0;
+    }
+}
+
+body {
+    background: #06D6A0;
+    animation: change-background 30s linear infinite;
+}
+
+.cube {
+    height: $size;
+    width: $size;
+    background: #FFFCF9;
+    animation: move-cube 2s linear infinite;
+    box-shadow: 0 0 calc($size / 10) rgba(0, 0, 0, .3);
+}
