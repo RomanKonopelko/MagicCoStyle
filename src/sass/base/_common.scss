@@ -61,11 +61,12 @@ p {
 }
 
 .container {
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+
+  width: 100%;
 
   @include for-size(tablet-portrait) {
     width: 480px;
@@ -74,12 +75,14 @@ p {
   @include for-size(tablet-landscape) {
     padding-left: 40px;
     padding-right: 40px;
+
     width: 768px;
   }
 
   @include for-size(desktop) {
     padding-left: 62.5px;
     padding-right: 62.5px;
+
     width: 1440px;
   }
 }
