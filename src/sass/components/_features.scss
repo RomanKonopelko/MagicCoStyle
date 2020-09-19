@@ -36,6 +36,7 @@
   align-items: center;
   z-index: 1;
   width: 100%;
+
   @include for-size(phone-only) {
     position: relative;
   }
@@ -59,6 +60,8 @@
   @include for-size(desktop) {
     position: absolute;
   }
+
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,6 +69,35 @@
   height: 60px;
   border: 2px solid $accent-color;
   z-index: -1;
+  animation: mymovem 5s ease-in-out infinite alternate 2s;
+
+  @keyframes mymovem {
+    from {
+      transform: rotate(0deg);
+      left: 0%;
+    }
+    to {
+      transform: rotate(540deg);
+      left: 75%;
+    }
+  }
+
+  @include for-size(tablet-landscape) {
+    position: relative;
+    animation: mymovet 5s ease-in-out infinite alternate 2s;
+
+    @keyframes mymovet {
+      from {
+        transform: rotate(0deg);
+        left: 0%;
+      }
+      to {
+        transform: rotate(540deg);
+        left: 70%;
+      }
+    }
+  }
+
   @include for-size(max-desktop) {
     margin-right: 10px;
   }
@@ -74,17 +106,6 @@
     position: absolute;
     width: 100px;
     height: 102px;
-    animation: mymove 5s ease-in-out infinite alternate;
-    @keyframes mymove {
-      from {
-        transform: rotate(0deg);
-        left: 0px;
-      }
-      to {
-        transform: rotate(360deg);
-        left: 400px;
-      }
-    }
   }
 
   &::before {
@@ -95,10 +116,9 @@
     height: 70%;
     background-color: #fff;
     top: 50%;
+    right: calc(100% - 58px);
     transform: translateY(-50%);
-    @include for-size(max-desktop) {
-      right: calc(100% - 60px);
-    }
+
     @include for-size(desktop) {
       right: calc(100% - 99px);
     }
@@ -108,47 +128,64 @@
 .features-icon {
   fill: $accent-color;
   height: 40px;
+  animation: moveicon 5s ease infinite alternate 2s;
+
+  @keyframes moveicon {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-540deg);
+    }
+  }
 
   @include for-size(desktop) {
     height: 47px;
-    animation: mymove 5s ease infinite alternate;
-    @keyframes mymove {
-      0% {
-        transform: rotate(0deg);
-        border-radius: 0%;
-        left: 0px;
-      }
-
-      50% {
-        border-radius: 50%;
-      }
-      100% {
-        transform: rotate(540deg);
-        border-radius: 0%;
-        left: 400px;
-      }
-    }
   }
 }
 
 .features-parapraph {
+  position: relative;
   display: inline-block;
+  animation: textslide 5s ease-in-out infinite alternate 2s;
+
+  @keyframes textslide {
+    from {
+      right: 0px;
+    }
+    to {
+      right: 25%;
+    }
+  }
+
   @include for-size(max-tablet) {
     width: calc(100% - 67px);
   }
-  @include for-size(desktop) {
-    padding-left: 74px;
+
+  @include for-size(tablet-landscape) {
+    position: relative;
+    animation: textslide 5s ease-in-out infinite alternate 2s;
+
+    @keyframes textslide {
+      from {
+        right: 0px;
+      }
+      to {
+        right: 25%;
+      }
+    }
   }
 
   @include for-size(desktop) {
     padding-left: 82px;
-    animation: textslide 5s ease-in-out infinite alternate;
+    animation: textslide 5s ease-in-out infinite alternate 2s;
+
     @keyframes textslide {
       from {
-        left: 0px;
+        right: 0px;
       }
       to {
-        left: 400px;
+        right: 20%;
       }
     }
   }
