@@ -137,6 +137,10 @@
   }
 }
 
+.form-name {
+  margin-bottom: 30px;
+}
+
 .form-tel {
   margin-bottom: 50px;
 }
@@ -149,11 +153,7 @@
 
 // Animation for input
 
-.form-email-field {
-  position: relative;
-  margin-bottom: 30px;
-}
-.form-tel-field {
+.form-field {
   position: relative;
 }
 
@@ -181,16 +181,6 @@
     left: 40px;
     transform: translateY(-50%);
     transition: transform 250ms linear;
-  }
-}
-
-.tel-label {
-  @include for-size(max-desktop) {
-    top: 20%;
-  }
-
-  @include for-size(desktop) {
-    top: 30%;
   }
 }
 
