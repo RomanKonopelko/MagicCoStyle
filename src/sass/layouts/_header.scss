@@ -1,8 +1,6 @@
 // Шапка сайта //
 
-
 .header {
-
   @include for-size(max-tablet) {
     justify-content: space-between;
   }
@@ -11,7 +9,6 @@
 
   align-items: center;
   padding-top: 30px;
-
 
   @include for-size(tablet-landscape) {
     padding-top: 42px;
@@ -33,15 +30,13 @@
 .nav.enumeration {
   display: flex;
   color: $primary-text-color;
-
 }
 
 .nav-items:not(:last-child) {
-
   margin-right: 40px;
 }
 
-.nav-items>a {
+.nav-items > a {
   font-size: 14px;
   line-height: 1.21;
   color: $primary-text-color;
@@ -51,34 +46,26 @@
   &:focus {
     color: $accent-color;
   }
-
 }
 
-.nav-items.mobile-items>a {
+.nav-items.mobile-items > a {
   font-weight: 800;
   font-size: 20px;
   line-height: 1.8;
   color: #ffffff;
 
   @include for-size(tablet-landscape) {
-
     font-size: 26px;
-
   }
-
 
   &:hover,
   &:focus,
   &:focus {
     color: $accent-color;
   }
-
 }
 
-
 // Added by Magdegaben
-
-
 
 .nav-menu.container {
   @include for-size(tablet-landscape) {
@@ -87,31 +74,26 @@
 }
 
 .mobile-menu {
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 0px;
   width: 100%;
-  height: 717px;
+  height: 100vh;
   z-index: 5;
 
   padding-top: 42px;
 
-
-  background: rgba(17, 21, 24, 0.9);
+  background: rgba(17, 21, 24, 0.95);
   transform: translateY(-100%);
   transition: transform 800ms $transition-duration;
 
-
-
   &.is-open {
     transform: translateY(0%);
-
   }
 
   @include for-size(desktop) {
     display: none;
   }
-
 }
 
 .mobile-flex-container {
@@ -123,20 +105,15 @@
   @include for-size(tablet-landscape) {
     margin-bottom: 159px;
   }
-
 }
 
 .mobile-list {
-
   margin-bottom: 50px;
 
   @include for-size(tablet-landscape) {
     display: inline-block;
     text-align: left;
-
   }
-
-
 }
 
 .icon-close {
