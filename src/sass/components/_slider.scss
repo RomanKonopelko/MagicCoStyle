@@ -99,7 +99,12 @@
 /* Конкретный слайдер */
 .slider {
   position: relative;
-  padding: 0px 24px;
+  padding: 0;
+
+  @media screen and (min-width: 380px) {
+    padding: 0px 24px;
+  }
+
   @include for-size(tablet) {
     padding: 0px 27px;
   }
@@ -168,15 +173,17 @@
   padding: 20px;
 
   @include for-size(phone-only) {
-    width: 215px;
+    width: 230px;
   }
 
   @include for-size(min-mobile) {
-    width: 330px;
+    width: 350px;
+    padding: 40px;
   }
 
   @include for-size(tablet-portrait) {
     width: 380px;
+    padding: 20px;
   }
   @include for-size(tablet-landscape) {
     flex-flow: row;
