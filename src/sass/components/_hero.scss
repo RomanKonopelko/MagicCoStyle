@@ -51,23 +51,21 @@
 // }
 
 .hero-container {
-  @include for-size(max-desktop) {
-    background-image: url('../images/pictures/hero-background.webp');
+  background-image: url('../images/pictures/hero-background.webp');
 
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: url('../images/pictures/hero-background@2x.webp');
-    }
-
-    @media screen and (min-device-pixel-ratio: 3),
-      screen and (min-resolution: 288dpi),
-      screen and (min-resolution: 3dppx) {
-      background-image: url('../images/pictures/hero-background@3x.webp');
-    }
-
-    background-size: cover;
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/pictures/hero-background@2x.webp');
   }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+    background-image: url('../images/pictures/hero-background@3x.webp');
+  }
+  background-size: cover;
+
   @include for-size(max-tablet) {
     text-align: center;
   }
