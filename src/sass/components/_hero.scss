@@ -49,6 +49,7 @@
 // .main-paragraph-score {
 //   color: $accent-color;
 // }
+
 .hero-container {
   @include for-size(max-desktop) {
     background-image: url('../images/pictures/hero-background.webp');
@@ -64,6 +65,8 @@
       screen and (min-resolution: 3dppx) {
       background-image: url('../images/pictures/hero-background@3x.webp');
     }
+
+    background-size: cover;
   }
   @include for-size(max-tablet) {
     text-align: center;
