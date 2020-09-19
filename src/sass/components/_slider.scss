@@ -7,7 +7,7 @@
 
 .slider {
   margin: 0 auto;
-  box-shadow: 0px 6px 28px rgba(49, 48, 47, 0.158);
+  box-shadow: 0px 6px 14px rgba(49, 48, 47, 0.158);
 }
 .slick-slider {
   min-width: 0;
@@ -45,6 +45,21 @@
   cursor: pointer;
 }
 
+.col.slick-slide.slick-slide.slick-center img {
+  box-shadow: 0 0 2pt 1pt $accent-color;
+  border-radius: 50%;
+}
+
+.col.slick-slide.slick-slide.slick-current img {
+  box-shadow: 0 0 2pt 1pt $accent-color;
+  border-radius: 50%;
+}
+
+.col.slick-slide.slick-slide.slick-center {
+  @media screen and (max-width: 340px) {
+    width: 74px !important;
+  }
+}
 .slick-slide {
   display: flex;
   align-items: center;
@@ -55,7 +70,6 @@
   width: 54px;
   outline: none;
   border-radius: 50%;
-  box-shadow: 0 0 2pt 1pt $accent-color;
   transition: transform $transition-duration $timing-function;
 
   &:hover,
@@ -116,32 +130,47 @@
 
 .slider .slick-arrow {
   position: absolute;
-  top: 109%;
+  top: 107%;
   transform: translate(0%, -50%);
   z-index: 10;
   font-size: 0;
   cursor: pointer;
   border: none;
-  width: 100px;
-  height: 10%;
+  width: 55px;
+  height: 8%;
 
-  &.skick-arrow:hover,
-  &.slick-arrow:focus {
+  @include for-size(min-mobile) {
+    top: 109%;
+    height: 12%;
+  }
+
+  @media screen and (min-width: 434px) {
+    width: 75px;
+  }
+
+  @include for-size(tablet-portrait) {
+    top: 110%;
   }
 
   @include for-size(tablet-landscape) {
     top: 50%;
-
+    width: 100px;
     height: 100%;
   }
 }
 .slider .slick-arrow.slick-prev {
-  left: 0%;
+  left: -4%;
   background: url(../images/icons/arrow-left.svg) 0 0 no-repeat;
   background-position: 50%;
+  background-color: white;
+
+  @media screen and (min-width: 434px) {
+    left: -2%;
+  }
 
   @include for-size(tablet-landscape) {
     left: -8%;
+    background-color: transparent;
   }
 
   @include for-size(desktop) {
@@ -150,12 +179,18 @@
 }
 
 .slider .slick-arrow.slick-next {
-  right: 0%;
+  right: -4%;
   background: url(../images/icons/arrow-right.svg) 0 0 no-repeat;
   background-position: 50%;
+  background-color: white;
+
+  @media screen and (min-width: 434px) {
+    right: -2%;
+  }
 
   @include for-size(tablet-landscape) {
     right: -8%;
+    background-color: transparent;
   }
 
   @include for-size(desktop) {
