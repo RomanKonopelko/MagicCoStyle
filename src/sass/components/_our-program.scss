@@ -90,8 +90,11 @@
   @media screen and (max-width: 400px) {
     margin-left: calc(100% - 65%);
   }
-  @media screen and (min-width: 401px) {
+  @media screen and (min-width: 401px) and (max-width: 767px) {
     margin-left: calc(100% - 59%);
+  }
+  @include for-size(max-desktop) {
+    margin-left: 120px;
   }
   @include for-size(desktop) {
     display: flex;
