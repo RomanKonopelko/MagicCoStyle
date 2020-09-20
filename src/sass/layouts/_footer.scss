@@ -106,7 +106,7 @@
 
     height: 40px;
 
-    border: 1px solid $primary-text-color;
+    border-left: 1px solid $primary-text-color;
 
     @include for-size(desktop) {
       margin-right: 24px;
