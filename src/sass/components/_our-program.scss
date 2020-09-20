@@ -39,7 +39,7 @@
   @include for-size(desktop) {
     background-image: url('../images/pictures/desktop/main-desktop.png');
     background-position-x: left;
-    background-position-y: 85%;
+    background-position-y: 90%;
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
@@ -106,7 +106,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  // width: 100%;
   margin-bottom: 40px;
   @include for-size(tablet-landscape) {
     margin-bottom: 0;
@@ -127,7 +126,7 @@
   &:not(:last-child)::before {
     content: '';
     position: absolute;
-    top: 6px;
+    top: 7px;
     left: -27px;
     width: 1px;
     animation-name: move-rope;
@@ -155,12 +154,6 @@
     height: 12px;
     border-radius: 50%;
     background-color: $accent-color;
-    // animation-name: rope-point;
-    // animation-duration: 2s;
-    // animation-delay: 2s;
-    // animation-timing-function: linear;
-    // animation-iteration-count: infinite;
-    // animation-direction: normal;
     @include for-size(tablet-landscape) {
       left: -62px;
     }
@@ -174,20 +167,20 @@
 }
 @keyframes move-rope {
   from {
-    transform: scale(0);
     transform-origin: top;
+    transform: scaleY(0);
   }
   40% {
-    transform: scale(1);
     transform-origin: top;
+    transform: scaleY(1);
   }
   60% {
-    transform: scale(1);
     transform-origin: bottom;
+    transform: scaleY(1);
   }
   to {
-    transform: scale(0);
     transform-origin: bottom;
+    transform: scaleY(0);
   }
 }
 @keyframes move-rope-desktop {
@@ -209,21 +202,6 @@
     transform-origin: right;
   }
 }
-// @keyframes rope-point {
-//   from {
-//     background: $accent-color;
-//   }
-//   50% {
-//     background: linear-gradient(#ff6b08, #d000b8);
-//   }
-
-//   51% {
-//     background: linear-gradient(#ff6b08, #d000b8);
-//   }
-//   to {
-//     background: $accent-color;
-//   }
-// }
 
 .program-list-title {
   padding-bottom: 5px;
@@ -310,15 +288,8 @@
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 40%);
-  // @include for-size(phone-only) {
-  //   max-width: 320px;
-  // }
 }
-// .program-absolute .container {
-// @include for-size(phone-only) {
-//   max-width: 320px;
-// }
-// }
+
 .chosen {
   width: 50%;
   margin-bottom: 30px;
