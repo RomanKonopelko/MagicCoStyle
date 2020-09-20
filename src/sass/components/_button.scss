@@ -431,6 +431,7 @@
 
   & .icon-up {
     fill: $accent-color;
+    transition: all $timing-function $transition-duration;
   }
 }
 
