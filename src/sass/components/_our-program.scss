@@ -4,17 +4,20 @@
   width: auto;
   background-color: $secondary-bg-color;
   background-image: url('../images/pictures/mobile/main-mobile.png');
-
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: 75%;
   @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     background-image: url('../images/pictures/mobile/main-mobile@2x.png');
     background-size: 120px;
   }
   @media screen and (min-device-pixel-ratio: 3),
+    screen and (-webkit-min-device-pixel-ratio: 3),
+    screen and (-o-min-device-pixel-ratio: 3/1),
     screen and (min-resolution: 288dpi),
     screen and (min-resolution: 3dppx) {
     background-image: url('../images/pictures/mobile/main-mobile@3x.png');
@@ -24,12 +27,16 @@
     background-image: url('../images/pictures/tablet/main-tablet.png');
     background-position-y: 75%;
     @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
       background-image: url('../images/pictures/tablet/main-tablet@2x.png');
       background-size: 384px;
     }
     @media screen and (min-device-pixel-ratio: 3),
+      screen and (-webkit-min-device-pixel-ratio: 3),
+      screen and (-o-min-device-pixel-ratio: 3/1),
       screen and (min-resolution: 288dpi),
       screen and (min-resolution: 3dppx) {
       background-image: url('../images/pictures/tablet/main-tablet@3x.png');
@@ -41,12 +48,16 @@
     background-position-x: left;
     background-position-y: 90%;
     @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
       background-image: url('../images/pictures/desktop/main-desktop@2x.png');
       background-size: 672px;
     }
     @media screen and (min-device-pixel-ratio: 3),
+      screen and (-webkit-min-device-pixel-ratio: 3),
+      screen and (-o-min-device-pixel-ratio: 3/1),
       screen and (min-resolution: 288dpi),
       screen and (min-resolution: 3dppx) {
       background-image: url('../images/pictures/desktop/main-desktop@3x.png');
@@ -62,10 +73,15 @@
       height: 1px;
       width: 100%;
       background-color: #ffffff;
+      -webkit-animation-name: move-rope-desktop;
       animation-name: move-rope-desktop;
+      -webkit-animation-duration: 4s;
       animation-duration: 4s;
+      -webkit-animation-timing-function: linear;
       animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
       animation-iteration-count: infinite;
+      -webkit-animation-direction: normal;
       animation-direction: normal;
     }
   }
@@ -97,6 +113,8 @@
     margin-left: 120px;
   }
   @include for-size(desktop) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-left: 0;
   }
@@ -104,7 +122,12 @@
 
 .program-list-item {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin-bottom: 40px;
   @include for-size(tablet-landscape) {
@@ -129,10 +152,15 @@
     top: 7px;
     left: -27px;
     width: 1px;
+    -webkit-animation-name: move-rope;
     animation-name: move-rope;
+    -webkit-animation-duration: 4s;
     animation-duration: 4s;
+    -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
     animation-direction: normal;
 
     height: calc(100% + 40px);
@@ -149,6 +177,8 @@
     position: absolute;
     top: 0;
     left: -32px;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
     transform: translateY(50%);
     width: 12px;
     height: 12px;
@@ -165,40 +195,109 @@
     }
   }
 }
-@keyframes move-rope {
+@-webkit-keyframes move-rope {
   from {
+    -webkit-transform-origin: top;
     transform-origin: top;
+    -webkit-transform: scaleY(0);
     transform: scaleY(0);
   }
   40% {
+    -webkit-transform-origin: top;
     transform-origin: top;
+    -webkit-transform: scaleY(1);
     transform: scaleY(1);
   }
   60% {
+    -webkit-transform-origin: bottom;
     transform-origin: bottom;
+    -webkit-transform: scaleY(1);
     transform: scaleY(1);
   }
   to {
+    -webkit-transform-origin: bottom;
     transform-origin: bottom;
+    -webkit-transform: scaleY(0);
     transform: scaleY(0);
   }
 }
-@keyframes move-rope-desktop {
+@keyframes move-rope {
   from {
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+  40% {
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  60% {
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  to {
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+@-webkit-keyframes move-rope-desktop {
+  from {
+    -webkit-transform: scaleX(0);
     transform: scaleX(0);
+    -webkit-transform-origin: left;
     transform-origin: left;
   }
   40% {
+    -webkit-transform: scaleX(1);
     transform: scaleX(1);
+    -webkit-transform-origin: left;
     transform-origin: left;
   }
 
   60% {
+    -webkit-transform: scaleX(1);
     transform: scaleX(1);
+    -webkit-transform-origin: right;
     transform-origin: right;
   }
   to {
+    -webkit-transform: scaleX(0);
     transform: scaleX(0);
+    -webkit-transform-origin: right;
+    transform-origin: right;
+  }
+}
+@keyframes move-rope-desktop {
+  from {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+  }
+  40% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+  }
+
+  60% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: right;
+    transform-origin: right;
+  }
+  to {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: right;
     transform-origin: right;
   }
 }
@@ -235,6 +334,8 @@
     position: absolute;
     top: 50%;
     left: -30px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 20px;
     height: 2px;
@@ -247,9 +348,14 @@
 }
 .program-chapters {
   @include for-size(tablet-landscape) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   @include for-size(desktop) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
@@ -287,14 +393,16 @@
   position: absolute;
   bottom: 0;
   left: 50%;
+  -webkit-transform: translate(-50%, 40%);
+  -ms-transform: translate(-50%, 40%);
   transform: translate(-50%, 40%);
 }
 
 .chosen {
-  width: 50%;
   margin-bottom: 30px;
-  background-color: transparent;
+  width: 50%;
   color: #ffffff;
+  background-color: transparent;
   @include for-size(tablet-landscape) {
     width: 100%;
     text-align: center;
