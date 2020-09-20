@@ -26,9 +26,11 @@
   margin-right: 40px;
 }
 
-.nav-items > a {
+.nav-items>a {
   font-weight: bold;
   font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: normal;
   line-height: 1.21;
   color: $primary-text-color;
   transition: color $timing-function $transition-duration;
@@ -40,7 +42,7 @@
   }
 }
 
-.nav-items.mobile-items > a {
+.nav-items.mobile-items>a {
   font-weight: 800;
   font-size: 20px;
   line-height: 1.8;
