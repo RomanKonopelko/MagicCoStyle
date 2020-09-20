@@ -31,15 +31,20 @@
 
 .teacher-flex {
   @include for-size(tablet-landscape) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
   }
 }
 
 .teacher-picture {
   @include for-size(tablet-landscape) {
+    -ms-flex-negative: 0;
     flex-shrink: 0;
     width: 35.3%;
   }
@@ -113,8 +118,16 @@
 }
 
 .teacher-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
+
+  -webkit-transition: color $transition-duration $timing-function;
+
+  -o-transition: color $transition-duration $timing-function;
 
   transition: color $transition-duration $timing-function;
 
@@ -143,6 +156,10 @@
 
   color: $title-text-color;
 
+  -webkit-transition: color $transition-duration $timing-function;
+
+  -o-transition: color $transition-duration $timing-function;
+
   transition: color $transition-duration $timing-function;
 
   @include for-size(desktop) {
@@ -152,6 +169,7 @@
 }
 
 .teacher-icon-check {
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-right: 9px;
 
@@ -160,6 +178,10 @@
   height: 14px;
 
   fill: $accent-color;
+  -webkit-transition: fill $transition-duration $timing-function,
+    width $transition-duration $timing-function;
+  -o-transition: fill $transition-duration $timing-function,
+    width $transition-duration $timing-function;
   transition: fill $transition-duration $timing-function,
     width $transition-duration $timing-function;
 
@@ -184,6 +206,7 @@
   margin-top: 10px;
 
   letter-spacing: normal;
+  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
 
   @include for-size(desktop) {

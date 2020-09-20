@@ -11,8 +11,14 @@
   padding-bottom: 30px;
 
   @include for-size(tablet-landscape) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 
     padding-top: 40px;
@@ -20,6 +26,8 @@
   }
 
   @include for-size(desktop) {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
 
     padding-top: 52px;
@@ -54,16 +62,26 @@
 
 .footer-nav {
   @include for-size(tablet-landscape) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 }
 
 .footer-tel {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 
   margin-bottom: 30px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   font-weight: 600;
@@ -81,6 +99,10 @@
   &:focus .footer-icon-call {
     fill: inherit;
   }
+
+  -webkit-transition: color $transition-duration $timing-function;
+
+  -o-transition: color $transition-duration $timing-function;
 
   transition: color $transition-duration $timing-function;
 
@@ -118,6 +140,10 @@
 .footer-icon-call {
   margin-right: 10px;
 
+  -webkit-box-pack: center;
+
+  -ms-flex-pack: center;
+
   justify-content: center;
   vertical-align: middle;
 
@@ -126,6 +152,10 @@
   height: 20px;
 
   fill: $accent-color;
+
+  -webkit-transition: fill $transition-duration $timing-function;
+
+  -o-transition: fill $transition-duration $timing-function;
 
   transition: fill $transition-duration $timing-function;
 
@@ -141,11 +171,21 @@
     height: 28px;
   }
 
+  -webkit-animation: footer-icon-call 0.9s ease-in-out infinite;
+
   animation: footer-icon-call 0.9s ease-in-out infinite;
+}
+
+@-webkit-keyframes footer-icon-call {
+  45% {
+    -webkit-transform: rotate(-55deg);
+    transform: rotate(-55deg);
+  }
 }
 
 @keyframes footer-icon-call {
   45% {
+    -webkit-transform: rotate(-55deg);
     transform: rotate(-55deg);
   }
 }
