@@ -8,6 +8,7 @@ jQuery(document).ready(function ($) {
     asNavFor: '.thumbnail-slider',
     mobileFirst: true,
     slidesToShow: 1,
+    initialSlide: 2,
     centerMode: true,
     responsive: [
       {
