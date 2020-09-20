@@ -27,9 +27,11 @@
 }
 
 .nav-items > a {
+  font-weight: bold;
   font-size: 14px;
   line-height: 1.21;
   color: $primary-text-color;
+  transition: color $timing-function $transition-duration;
 
   &:hover,
   &:focus,
