@@ -17,8 +17,8 @@
           name="name"
           id="user"
           placeholder=" "
-          pattern="[A-Za-zА-Яа-яЁёІіЇїЄє]{2,20}"
-          title="Поле должно содержать только буквы латинского, русского или украинского алфавита"
+          pattern="[A-Za-zА-Яа-яЁёІіЇїЄє' -]{2,50}"
+          title="Поле должно содержать только буквы латинского, русского или украинского алфавита, пробел, дефис или апостроф"
           required
         />
         <label for="user" class="modal-label">Имя*</label>
@@ -31,8 +31,8 @@
           name="telephone"
           id="telephone"
           placeholder=" "
-          pattern="[ 0-9]{10,12}"
-          title="Поле должно содержать только цифры"
+          pattern="[0-9]{10,12}"
+          title="Поле должно содержать только от 10 до 12 цифр"
           required
         />
         <label for="telephone" class="modal-label modal-tel-label"
