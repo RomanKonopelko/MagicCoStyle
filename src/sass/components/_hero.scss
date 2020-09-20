@@ -1,4 +1,17 @@
+// Стили основного контейнера секции hero и фоновый рисунок с его стилями
 .hero-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include for-size(tablet-landscape) {
+    position: relative;
+    display: flex;
+  }
+
+  @include for-size(max-tablet) {
+    text-align: center;
+  }
+
   @include for-size(min-mobile) {
     background-image: url('../images/pictures/hero-background.webp');
 
@@ -17,35 +30,31 @@
     @include for-size(max-desktop) {
       background-size: 768px 557px;
     }
-    background-repeat: no-repeat;
   }
+
   @include for-size(max-tablet) {
     background-position-x: -50px;
     background-position-y: 30px;
   }
+
   @media screen and (min-width: 768px) and (max-width: 1439.9px) {
     height: 507px;
-    background-position-x: 0px;
+    background-position-x: 0;
     background-position-y: -54px;
   }
+
   @include for-size(desktop) {
-    background-size: 1440px 878px;
     height: 878px;
+    background-size: 1440px 878px;
     background-position-x: -27px;
     background-position-y: 40px;
   }
-  background-size: cover;
-
-  @include for-size(max-tablet) {
-    text-align: center;
-  }
-  @include for-size(tablet-landscape) {
-    position: relative;
-    display: flex;
-  }
 }
 
+// Стили контейнера с заголовком абзацем текста и кнопкой
 .hero-main {
+  color: $title-text-color;
+
   @include for-size(max-desktop) {
     display: inline-block;
     max-width: 275px;
@@ -59,20 +68,21 @@
   @include for-size(max-tablet) {
     margin-bottom: 30px;
   }
-
-  color: $title-text-color;
 }
 
+// Стили заголовка секции hero
 .main-title {
+  font-weight: 800;
+  color: $title-text-color;
+  letter-spacing: .03em;
+
   @include for-size(max-desktop) {
     margin-bottom: 30px;
   }
+
   @include for-size(desktop) {
     margin-bottom: 24px;
   }
-
-  color: $title-text-color;
-  font-weight: 800;
 
   @include for-size(max-tablet) {
     font-size: 20px;
@@ -88,10 +98,9 @@
     font-size: 58px;
     line-height: 1.29;
   }
-
-  letter-spacing: 0.03em;
 }
 
+// Стили абзаца текста секции hero
 .main-paragraph {
   font-weight: 700;
 
@@ -108,25 +117,29 @@
   }
 }
 
+// Стили тэга span для изменения стилизации отдельной строки в абзаце текста
 .main-paragraph-text {
   display: block;
+
   @include for-size(max-desktop) {
-    color: $primary-text-color;
     font-weight: 500;
+    color: $primary-text-color;
   }
 
   @include for-size(desktop) {
-    color: $primary-text-color;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.65;
+    color: $primary-text-color;
   }
 }
 
+// Стили тэга span для стилизации фразы "+ 25 балов"
 .main-paragraph-score {
   color: $accent-color;
 }
 
+// Стили контейнера кнопки
 .button-container {
   @include for-size(max-tablet) {
     text-align: center;
@@ -143,10 +156,11 @@
     padding: 26px;
     font-size: 14px;
     line-height: 1.21;
-    letter-spacing: 0.14em;
+    letter-spacing: .14em;
   }
 }
 
+// Стили контейнера контентного изображения секции hero
 .main-image {
   @include for-size(tablet-landscape) {
     position: absolute;
