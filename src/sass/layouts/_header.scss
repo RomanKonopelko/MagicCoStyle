@@ -1,10 +1,16 @@
 // Шапка сайта //
 
 .primary {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   @include for-size(max-tablet) {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 }
@@ -18,6 +24,8 @@
 }
 
 .nav.enumeration {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: $primary-text-color;
 }
@@ -33,6 +41,11 @@
   letter-spacing: normal;
   line-height: 1.21;
   color: $primary-text-color;
+
+  -webkit-transition: color $timing-function $transition-duration;
+
+  -o-transition: color $timing-function $transition-duration;
+
   transition: color $timing-function $transition-duration;
 
   &:hover,
@@ -71,21 +84,33 @@
   position: fixed;
   left: 0px;
   top: 0px;
+
+  padding-top: 30px;
+
   width: 100%;
   height: 100vh;
   z-index: 5;
 
-  padding-top: 30px;
-
   background: rgba(17, 21, 24, 0.95);
+
+  -webkit-transform: translateY(-100%);
+
+  -ms-transform: translateY(-100%);
+
   transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 800ms $transition-duration;
+  transition: -webkit-transform 800ms $transition-duration;
+  -o-transition: transform 800ms $transition-duration;
   transition: transform 800ms $transition-duration;
+  transition: transform 800ms $transition-duration, -webkit-transform 800ms $transition-duration;
 
   @include for-size(tablet-landscape) {
     padding-top: 40px;
   }
 
   &.is-open {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
     transform: translateY(0%);
   }
 
@@ -95,19 +120,30 @@
 
   & .nav-menu {
     opacity: 0;
+    -webkit-transition: 500ms $transition-duration;
+    -o-transition: 500ms $transition-duration;
     transition: 500ms $transition-duration;
   }
 
   &.is-open .nav-menu {
     opacity: 1;
+    -webkit-transition: 500ms $transition-duration;
+    -o-transition: 500ms $transition-duration;
     transition: 500ms $transition-duration;
   }
 }
 
 .mobile-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+
   margin-bottom: 50px;
 
   @include for-size(tablet-landscape) {

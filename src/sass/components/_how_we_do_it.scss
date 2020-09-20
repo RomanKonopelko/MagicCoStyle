@@ -1,3 +1,5 @@
+// Как мы это делаем
+
 .section-first.explanation {
     padding-top: 198px;
 
@@ -9,6 +11,7 @@
 .description {
     margin-top: 0px;
     margin-bottom: 30px;
+
     text-align: center;
 
     @include for-size(desktop) {
@@ -20,27 +23,54 @@
     cursor: pointer;
 
     @include for-size(tablet-landscape) {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+
         margin: -10px;
 
         @include for-size(desktop) {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+
             margin: -10px;
         }
     }
 
     &-item {
         width: 280px;
+
         margin-left: auto;
         margin-right: auto;
         padding-top: 30px;
         padding-bottom: 22px;
+
         text-align: center;
+
+        -webkit-box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+
         box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+
+        -webkit-transition: background-color $timing-function $transition-duration,
+            -webkit-transform $timing-function $transition-duration;
+
+        transition: background-color $timing-function $transition-duration,
+            -webkit-transform $timing-function $transition-duration;
+
+        -o-transition: background-color $timing-function $transition-duration,
+            transform $timing-function $transition-duration;
+
         transition: background-color $timing-function $transition-duration,
             transform $timing-function $transition-duration;
+
+        transition: background-color $timing-function $transition-duration,
+            transform $timing-function $transition-duration,
+            -webkit-transform $timing-function $transition-duration;
 
         @include for-size(max-tablet) {
             padding-left: 15px;
@@ -49,6 +79,7 @@
 
         @include for-size(tablet-landscape) {
             width: calc(50% - 20px);
+
             margin: 10px;
             padding-top: 40px;
             padding-left: 20px;
@@ -57,6 +88,7 @@
 
         @include for-size(desktop) {
             width: calc((100% - 60px) / 3);
+
             margin: 10px;
             padding-top: 40px;
             padding-bottom: 55px;
@@ -83,13 +115,24 @@
     &-item-image {
         width: 80px;
         height: 48px;
+
         fill: $accent-color;
+
+        -webkit-transition: fill $timing-function $transition-duration;
+
+        -o-transition: fill $timing-function $transition-duration;
+
         transition: fill $timing-function $transition-duration;
     }
 
     &-item-title {
         margin: 0px;
         margin-bottom: 15px;
+
+        -webkit-transition: color $timing-function $transition-duration;
+
+        -o-transition: color $timing-function $transition-duration;
+
         transition: color $timing-function $transition-duration;
 
     }
@@ -98,19 +141,31 @@
         display: inline-block;
         height: 2px;
         width: 20px;
+
         margin-bottom: 15px;
+
         background-color: $accent-color;
+
+        -webkit-transition: background-color $timing-function $transition-duration;
+
+        -o-transition: background-color $timing-function $transition-duration;
+
         transition: background-color $timing-function $transition-duration;
     }
 
 
     &-item-descr {
+        margin: 0px;
+
         font-weight: 500;
         font-size: 12px;
         line-height: 1.6;
-        margin: 0px;
-
         color: $primary-text-color;
+
+        -webkit-transition: color $timing-function $transition-duration;
+
+        -o-transition: color $timing-function $transition-duration;
+
         transition: color $timing-function $transition-duration;
 
         @include for-size(desktop) {
@@ -124,6 +179,11 @@
 .methods-item:focus {
     background-color: $accent-color;
     border-radius: 2px;
+
+    -webkit-transform: scale(1.05);
+
+    -ms-transform: scale(1.05);
+
     transform: scale(1.05);
 
     & .methods-item-title,
