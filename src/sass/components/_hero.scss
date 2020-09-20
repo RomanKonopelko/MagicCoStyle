@@ -109,8 +109,8 @@
 }
 
 .main-paragraph-text {
+  display: block;
   @include for-size(max-desktop) {
-    display: block;
     color: $primary-text-color;
     font-weight: 500;
   }
