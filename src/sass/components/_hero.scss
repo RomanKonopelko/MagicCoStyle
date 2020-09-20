@@ -108,12 +108,6 @@
     max-width: 608px;
   }
 
-  @include for-size(max-desktop) {
-    & :not(:last-child) {
-      margin-bottom: 30px;
-    }
-  }
-
   @include for-size(max-tablet) {
     margin-bottom: 30px;
   }
@@ -122,6 +116,9 @@
 }
 
 .main-title {
+  @include for-size(max-desktop) {
+    margin-bottom: 30px;
+  }
   @include for-size(desktop) {
     margin-bottom: 24px;
   }
@@ -151,6 +148,7 @@
   font-weight: 700;
 
   @include for-size(max-desktop) {
+    margin-bottom: 30px;
     font-size: 14px;
     line-height: 1.57;
   }
@@ -164,6 +162,7 @@
 
 .main-paragraph-text {
   @include for-size(max-desktop) {
+    display: block;
     color: $primary-text-color;
     font-weight: 500;
   }
