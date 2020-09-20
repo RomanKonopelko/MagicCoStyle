@@ -1,14 +1,12 @@
 // Шапка сайта //
 
 .primary {
-
   display: flex;
   align-items: center;
 
   @include for-size(max-tablet) {
     justify-content: space-between;
   }
-
 }
 
 .main-nav {
@@ -28,7 +26,7 @@
   margin-right: 40px;
 }
 
-.nav-items>a {
+.nav-items > a {
   font-size: 14px;
   line-height: 1.21;
   color: $primary-text-color;
@@ -40,7 +38,7 @@
   }
 }
 
-.nav-items.mobile-items>a {
+.nav-items.mobile-items > a {
   font-weight: 800;
   font-size: 20px;
   line-height: 1.8;
@@ -89,6 +87,16 @@
 
   @include for-size(desktop) {
     display: none;
+  }
+
+  & .nav-menu {
+    opacity: 0;
+    transition: 500ms $transition-duration;
+  }
+
+  &.is-open .nav-menu {
+    opacity: 1;
+    transition: 500ms $transition-duration;
   }
 }
 
