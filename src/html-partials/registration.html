@@ -18,8 +18,8 @@
           type="text"
           name="name"
           placeholder=" "
-          pattern="[A-Za-zА-Яа-яЁёІіЇїЄє]{2,20}"
-          title="Поле должно содержать только буквы латинского, русского или украинского алфавита"
+          pattern="[A-Za-zА-Яа-яЁёІіЇїЄє' -]{2,50}"
+          title="Поле должно содержать только буквы латинского, русского или украинского алфавита, пробел, дефис или апостроф"
           required
         />
         <label for="name" class="form-label">Имя*</label>
@@ -33,7 +33,7 @@
           id="phone"
           placeholder=" "
           pattern="[0-9]{10,12}"
-          title="Поле должно содержать только цифры"
+          title="Поле должно содержать только от 10 до 12 цифр"
           required
         />
         <label for="phone" class="form-label tel-label">Телефон*</label>
