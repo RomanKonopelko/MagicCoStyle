@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 // Общие стили для двух секций со счетчиком //
 
 .problem {
@@ -40,12 +47,15 @@
   padding-right: 14px;
   padding-left: 30px;
   padding-bottom: 20px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 
   letter-spacing: 0.08em;
 
   color: $secondary-text-color;
   background-color: #ffffff;
+  -webkit-box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 
   counter-reset: section;
@@ -57,7 +67,10 @@
   }
 
   @include for-size(tablet-landscape) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding-left: 96px;
     padding-right: 96px;
@@ -71,8 +84,13 @@
     }
   }
   @include for-size(desktop) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 
     padding-top: 70px;
@@ -87,14 +105,6 @@
     &-items:nth-child(-n + 3) {
       padding-bottom: 30px;
     }
-  }
-}
-
-.problem-list-items:hover,
-.problem-list-items:focus {
-  font-size: 16px;
-  @include for-size(desktop) {
-    font-size: 22px;
   }
 }
 
