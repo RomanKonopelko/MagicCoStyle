@@ -5,6 +5,8 @@
 
   @include for-size(tablet-landscape) {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -16,12 +18,16 @@
     background-image: url('../images/pictures/hero-background.webp');
 
     @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
       background-image: url('../images/pictures/hero-background@2x.webp');
     }
 
     @media screen and (min-device-pixel-ratio: 3),
+      screen and (-webkit-min-device-pixel-ratio: 3),
+      screen and (-o-min-device-pixel-ratio: 3/1),
       screen and (min-resolution: 288dpi),
       screen and (min-resolution: 3dppx) {
       background-image: url('../images/pictures/hero-background@3x.webp');
