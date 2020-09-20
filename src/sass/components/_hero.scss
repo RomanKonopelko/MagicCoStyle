@@ -1,3 +1,4 @@
+// Стили основного контейнера секции hero и фоновый рисунок с его стилями
 .hero-container {
   background-size: cover;
   background-repeat: no-repeat;
@@ -50,6 +51,7 @@
   }
 }
 
+// Стили контейнера с заголовком абзацем текста и кнопкой
 .hero-main {
   color: $title-text-color;
 
@@ -68,6 +70,7 @@
   }
 }
 
+// Стили заголовка секции hero
 .main-title {
   font-weight: 800;
   color: $title-text-color;
@@ -97,6 +100,7 @@
   }
 }
 
+// Стили абзаца текста секции hero
 .main-paragraph {
   font-weight: 700;
 
@@ -113,6 +117,7 @@
   }
 }
 
+// Стили тэга span для изменения стилизации отдельной строки в абзаце текста
 .main-paragraph-text {
   display: block;
 
@@ -129,10 +134,12 @@
   }
 }
 
+// Стили тэга span для стилизации фразы "+ 25 балов"
 .main-paragraph-score {
   color: $accent-color;
 }
 
+// Стили контейнера кнопки
 .button-container {
   @include for-size(max-tablet) {
     text-align: center;
@@ -153,6 +160,7 @@
   }
 }
 
+// Стили контейнера контентного изображения секции hero
 .main-image {
   @include for-size(tablet-landscape) {
     position: absolute;
