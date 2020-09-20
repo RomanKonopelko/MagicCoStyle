@@ -8,12 +8,16 @@
   background-size: cover;
 
   @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     background-image: url(../images/pictures/mobile/form-mobile@2x.png);
   }
 
   @media screen and (min-device-pixel-ratio: 3),
+    screen and (-webkit-min-device-pixel-ratio: 3),
+    screen and (-o-min-device-pixel-ratio: 3/1),
     screen and (min-resolution: 288dpi),
     screen and (min-resolution: 3dppx) {
     background-image: url(../images/pictures/mobile/form-mobile@3x.png);
@@ -23,12 +27,16 @@
     background-image: url(../images/pictures/tablet/form-tablet.png);
 
     @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
       background-image: url(../images/pictures/tablet/form-tablet@2x.png);
     }
 
     @media screen and (min-device-pixel-ratio: 3),
+      screen and (-webkit-min-device-pixel-ratio: 3),
+      screen and (-o-min-device-pixel-ratio: 3/1),
       screen and (min-resolution: 288dpi),
       screen and (min-resolution: 3dppx) {
       background-image: url(../images/pictures/tablet/form-tablet@3x.png);
@@ -43,12 +51,16 @@
     background-position: inherit;
 
     @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
       background-image: url(../images/pictures/desktop/form-desktop@2x.png);
     }
 
     @media screen and (min-device-pixel-ratio: 3),
+      screen and (-webkit-min-device-pixel-ratio: 3),
+      screen and (-o-min-device-pixel-ratio: 3/1),
       screen and (min-resolution: 288dpi),
       screen and (min-resolution: 3dppx) {
       background-image: url(../images/pictures/desktop/form-desktop@3x.png);
@@ -58,9 +70,18 @@
 
 .form {
   @include for-size(tablet-landscape) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 }
@@ -119,8 +140,22 @@
   border: 1px solid $button-text-color;
   background-color: transparent;
 
+  -webkit-transition: border $transition-duration $timing-function;
+  -o-transition: border $transition-duration $timing-function;
   transition: border $transition-duration $timing-function;
 
+  &::-webkit-input-placeholder {
+    color: $button-text-color;
+  }
+  &::-moz-placeholder {
+    color: $button-text-color;
+  }
+  &:-ms-input-placeholder {
+    color: $button-text-color;
+  }
+  &::-ms-input-placeholder {
+    color: $button-text-color;
+  }
   &::placeholder {
     color: $button-text-color;
   }
@@ -177,8 +212,14 @@
   @include for-size(max-desktop) {
     top: 40%;
     left: 40px;
+    -webkit-transform: translateY(-30%);
+    -ms-transform: translateY(-30%);
     transform: translateY(-30%);
+    -webkit-transition: -webkit-transform 250ms linear;
+    transition: -webkit-transform 250ms linear;
+    -o-transition: transform 250ms linear;
     transition: transform 250ms linear;
+    transition: transform 250ms linear, -webkit-transform 250ms linear;
   }
 
   @media screen and (min-width: 480px) and (max-width: 767.9px) {
@@ -188,8 +229,14 @@
   @include for-size(desktop) {
     top: 50%;
     left: 40px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    -webkit-transition: -webkit-transform 250ms linear;
+    transition: -webkit-transform 250ms linear;
+    -o-transition: transform 250ms linear;
     transition: transform 250ms linear;
+    transition: transform 250ms linear, -webkit-transform 250ms linear;
   }
 }
 
@@ -198,10 +245,14 @@
   color: $accent-color;
 
   @include for-size(max-desktop) {
+    -webkit-transform: translate(-40px, -40px);
+    -ms-transform: translate(-40px, -40px);
     transform: translate(-40px, -40px);
   }
 
   @include for-size(desktop) {
+    -webkit-transform: translate(-40px, -60px);
+    -ms-transform: translate(-40px, -60px);
     transform: translate(-40px, -60px);
   }
 }
