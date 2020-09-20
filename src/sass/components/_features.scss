@@ -69,14 +69,18 @@
   height: 60px;
   border: 2px solid $accent-color;
   z-index: -1;
-  animation: mymovem 5s ease-in-out infinite alternate 2s;
+  animation: mymovem 6s ease-in-out infinite alternate 2s;
 
   @keyframes mymovem {
-    from {
+    20% {
       transform: rotate(0deg);
       left: 0%;
     }
-    to {
+    90% {
+      transform: rotate(540deg);
+      left: 75%;
+    }
+    100% {
       transform: rotate(540deg);
       left: 75%;
     }
@@ -84,14 +88,18 @@
 
   @include for-size(tablet-landscape) {
     position: relative;
-    animation: mymovet 5s ease-in-out infinite alternate 2s;
+    animation: mymovet 6s ease-in-out infinite alternate 2s;
 
     @keyframes mymovet {
-      from {
+      20% {
         transform: rotate(0deg);
         left: 0%;
       }
-      to {
+      90% {
+        transform: rotate(540deg);
+        left: 70%;
+      }
+      100% {
         transform: rotate(540deg);
         left: 70%;
       }
@@ -128,11 +136,14 @@
 .features-icon {
   fill: $accent-color;
   height: 40px;
-  animation: moveicon 5s ease infinite alternate 2s;
+  animation: moveicon 6s ease infinite alternate 2s;
 
   @keyframes moveicon {
-    0% {
+    20% {
       transform: rotate(0deg);
+    }
+    90% {
+      transform: rotate(540deg);
     }
     100% {
       transform: rotate(540deg);
@@ -147,13 +158,16 @@
 .features-parapraph {
   position: relative;
   display: inline-block;
-  animation: textslide 5s ease-in-out infinite alternate 2s;
+  animation: textslide 6s ease-in-out infinite alternate 2s;
 
   @keyframes textslide {
-    from {
+    20% {
       right: 0px;
     }
-    to {
+    90% {
+      right: 25%;
+    }
+    100% {
       right: 25%;
     }
   }
@@ -164,13 +178,16 @@
 
   @include for-size(tablet-landscape) {
     position: relative;
-    animation: textslide 5s ease-in-out infinite alternate 2s;
+    animation: textslide 6s ease-in-out infinite alternate 2s;
 
     @keyframes textslide {
-      from {
+      20% {
         right: 0px;
       }
-      to {
+      90% {
+        right: 25%;
+      }
+      100% {
         right: 25%;
       }
     }
@@ -178,13 +195,16 @@
 
   @include for-size(desktop) {
     padding-left: 82px;
-    animation: textslide 5s ease-in-out infinite alternate 2s;
+    animation: textslide 6s ease-in-out infinite alternate 2s;
 
     @keyframes textslide {
-      from {
+      20% {
         right: 0px;
       }
-      to {
+      90% {
+        right: 20%;
+      }
+      100% {
         right: 20%;
       }
     }
