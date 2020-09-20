@@ -90,6 +90,14 @@
   }
 }
 
+.problem-list-items:hover,
+.problem-list-items:focus {
+  font-size: 16px;
+  @include for-size(desktop) {
+    font-size: 22px;
+  }
+}
+
 // Разметка для линий и списка через счетчик //
 
 .problem-list-items {
