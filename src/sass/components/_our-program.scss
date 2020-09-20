@@ -276,7 +276,7 @@
   }
 }
 .program-sublist {
-  width: calc(100%);
+  width: 100%;
   @include for-size(tablet-landscape) {
     width: calc((100% - 50px * 2) / 3);
   }
