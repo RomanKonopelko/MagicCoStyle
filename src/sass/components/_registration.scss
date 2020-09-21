@@ -106,6 +106,12 @@
   }
 }
 
+.registration-title .br {
+  @include for-size(desktop) {
+    display: block;
+  }
+}
+
 .registration-paragraph {
   margin-bottom: 30px;
 
