@@ -68,10 +68,6 @@
   }
 }
 
-.br {
-  display: block;
-}
-
 .form {
   @include for-size(tablet-landscape) {
     display: -webkit-box;
