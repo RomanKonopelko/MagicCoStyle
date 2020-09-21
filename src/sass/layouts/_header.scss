@@ -26,7 +26,7 @@
   margin-right: 40px;
 }
 
-.nav-items > a {
+.nav-items>a {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.21;
@@ -40,7 +40,7 @@
   }
 }
 
-.nav-items.mobile-items > a {
+.nav-items.mobile-items>a {
   font-weight: 800;
   font-size: 20px;
   line-height: 1.8;
@@ -111,6 +111,18 @@
   @include for-size(tablet-landscape) {
     margin-bottom: 159px;
   }
+
+  &+.magic-box {
+
+    @include for-size(min-mobile) {
+      display: inline-block;
+    }
+
+
+
+  }
+
+
 }
 
 .mobile-list {
