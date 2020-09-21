@@ -97,8 +97,8 @@
     );
     background: -o-linear-gradient(left, $accent-color, white);
     background: linear-gradient(to right, $accent-color, white);
-    -webkit-animation: animate1 8s ease-in-out infinite;
-    animation: animate1 8s ease-in-out infinite;
+    -webkit-animation: animate1 7s ease-in-out infinite;
+    animation: animate1 7s ease-in-out infinite;
   }
 
   @-webkit-keyframes animate1 {
@@ -138,10 +138,8 @@
     );
     background: -o-linear-gradient(top, $accent-color, white);
     background: linear-gradient(to bottom, $accent-color, white);
-    -webkit-animation: animate2 8s ease-in-out infinite;
-    animation: animate2 8s ease-in-out infinite;
-    -webkit-animation-delay: 4s;
-    animation-delay: 4s;
+    -webkit-animation: animate2 7s ease-in-out infinite;
+    animation: animate2 7s ease-in-out infinite;
   }
 
   @-webkit-keyframes animate2 {
@@ -181,8 +179,8 @@
     );
     background: -o-linear-gradient(right, $accent-color, white);
     background: linear-gradient(to left, $accent-color, white);
-    -webkit-animation: animate3 8s ease-in-out infinite;
-    animation: animate3 8s ease-in-out infinite;
+    -webkit-animation: animate3 7s ease-in-out infinite;
+    animation: animate3 7s ease-in-out infinite;
   }
   @-webkit-keyframes animate3 {
     0% {
@@ -220,9 +218,7 @@
     background: -o-linear-gradient(bottom, $accent-color, white);
     background: linear-gradient(to top, $accent-color, white);
     -webkit-animation: animate4 8s ease-in-out infinite;
-    animation: animate4 8s ease-in-out infinite;
-    -webkit-animation-delay: 4s;
-    animation-delay: 4s;
+    animation: animate4 7s ease-in-out infinite;
   }
   @-webkit-keyframes animate4 {
     0% {
