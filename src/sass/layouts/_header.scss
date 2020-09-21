@@ -149,6 +149,18 @@
   @include for-size(tablet-landscape) {
     margin-bottom: 159px;
   }
+
+  &+.magic-box {
+
+    @include for-size(min-mobile) {
+      display: inline-block;
+    }
+
+
+
+  }
+
+
 }
 
 .mobile-list {
