@@ -186,9 +186,9 @@
   position: absolute;
   top: 0;
   left: 30px;
-  -webkit-transform: translateY(90%);
-  -ms-transform: translateY(90%);
-  transform: translateY(90%);
+  -webkit-transform: translateY(60%);
+  -ms-transform: translateY(60%);
+  transform: translateY(60%);
 
   color: $primary-text-color;
 
@@ -197,6 +197,12 @@
   -o-transition: transform 250ms linear;
   transition: transform 250ms linear;
   transition: transform 250ms linear, -webkit-transform 250ms linear;
+
+  @include for-size(desktop) {
+    -webkit-transform: translateY(70%);
+    -ms-transform: translateY(70%);
+    transform: translateY(70%);
+  }
 }
 
 .modal-input:focus + .modal-label,
