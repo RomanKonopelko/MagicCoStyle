@@ -108,6 +108,7 @@
   background-color: $accent-color;
   border: 1px solid $accent-color;
   border-radius: 50%;
+  outline: none;
   cursor: pointer;
 
   -webkit-transition: color $transition-duration $timing-function,
@@ -120,12 +121,18 @@
   &:hover,
   &:focus {
     background-color: $button-text-color;
+    box-shadow: 0 0 2pt 1pt $accent-color;
     color: $accent-color;
   }
 }
 
 .icon-close {
   fill: currentColor;
+}
+
+.btn-close:hover .icon-close,
+.btn-close:focus .icon-close {
+  fill: $accent-color;
 }
 
 .btn-position {
