@@ -586,8 +586,8 @@ p {
   background: -webkit-gradient(linear, left top, right top, from(#ff6b09), to(white));
   background: -o-linear-gradient(left, #ff6b09, white);
   background: linear-gradient(to right, #ff6b09, white);
-  -webkit-animation: animate1 8s ease-in-out infinite;
-  animation: animate1 8s ease-in-out infinite;
+  -webkit-animation: animate1 7s ease-in-out infinite;
+  animation: animate1 7s ease-in-out infinite;
 }
 @-webkit-keyframes animate1 {
   0% {
@@ -618,10 +618,8 @@ p {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff6b09), to(white));
   background: -o-linear-gradient(top, #ff6b09, white);
   background: linear-gradient(to bottom, #ff6b09, white);
-  -webkit-animation: animate2 8s ease-in-out infinite;
-  animation: animate2 8s ease-in-out infinite;
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
+  -webkit-animation: animate2 7s ease-in-out infinite;
+  animation: animate2 7s ease-in-out infinite;
 }
 @-webkit-keyframes animate2 {
   0% {
@@ -652,8 +650,8 @@ p {
   background: -webkit-gradient(linear, right top, left top, from(#ff6b09), to(white));
   background: -o-linear-gradient(right, #ff6b09, white);
   background: linear-gradient(to left, #ff6b09, white);
-  -webkit-animation: animate3 8s ease-in-out infinite;
-  animation: animate3 8s ease-in-out infinite;
+  -webkit-animation: animate3 7s ease-in-out infinite;
+  animation: animate3 7s ease-in-out infinite;
 }
 @-webkit-keyframes animate3 {
   0% {
@@ -685,9 +683,7 @@ p {
   background: -o-linear-gradient(bottom, #ff6b09, white);
   background: linear-gradient(to top, #ff6b09, white);
   -webkit-animation: animate4 8s ease-in-out infinite;
-  animation: animate4 8s ease-in-out infinite;
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
+  animation: animate4 7s ease-in-out infinite;
 }
 @-webkit-keyframes animate4 {
   0% {
