@@ -115,10 +115,12 @@
   &+.magic-box {
 
     @include for-size(min-mobile) {
-      display: inline-block;
+      display: block;
     }
 
-
+    @include for-size(tablet-landscape) {
+      display: inline-block;
+    }
 
   }
 
