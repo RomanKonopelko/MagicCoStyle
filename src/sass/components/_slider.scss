@@ -224,19 +224,6 @@
   text-align: center;
   padding: 20px;
 
-  @include for-size(phone-only) {
-    width: 230px;
-  }
-
-  @include for-size(min-mobile) {
-    width: 350px;
-    padding: 40px;
-  }
-
-  @include for-size(tablet-portrait) {
-    width: 380px;
-    padding: 20px;
-  }
   @include for-size(tablet-landscape) {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -247,13 +234,10 @@
     align-items: flex-start;
     text-align: start;
     padding: 40px;
-    width: 688px;
   }
 
   @include for-size(desktop) {
-    width: 1090px;
-    padding: 50px 50px 50px 50px;
-    margin: 0 auto;
+    padding: 50px;
   }
 }
 

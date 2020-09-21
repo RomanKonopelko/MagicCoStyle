@@ -1,6 +1,5 @@
 jQuery(document).ready(function ($) {
   $('.slider').slick({
-    variableWidth: true,
     dots: false,
     infinite: true,
     speed: 1000,
@@ -8,13 +7,11 @@ jQuery(document).ready(function ($) {
     mobileFirst: true,
     slidesToShow: 1,
     initialSlide: 2,
-    centerMode: true,
     responsive: [
       {
         breakpoint: 768,
         settings: {
           asNavFor: false,
-          adaptiveHeight: true,
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: false,
@@ -28,7 +25,6 @@ jQuery(document).ready(function ($) {
     arrows: false,
     draggable: false,
     infinite: true,
-    itemWidth: 500,
     asNavFor: '.slider',
     dots: false,
     centerMode: true,
