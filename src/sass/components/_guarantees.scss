@@ -1,7 +1,11 @@
+// Мы гарантируем
+
+
 .block-guaranties {
   @include for-size(max-tablet) {
     margin-left: auto;
     margin-right: auto;
+
     background-color: #f1f1f1;
   }
 }
@@ -13,12 +17,14 @@
 }
 
 .list-guaranties {
-  background-color: #f1f1f1;
   font-size: 12px;
   line-height: 1.66;
   color: $secondary-text-color;
-
   text-align: left;
+
+  background-color: #f1f1f1;
+
+
 
   @include for-size(max-tablet) {
     padding-top: 30px;
@@ -31,6 +37,7 @@
     padding-bottom: 30px;
     padding-left: 118px;
     padding-right: 50px;
+
     background-color: #f1f1f1;
   }
 
@@ -39,12 +46,14 @@
     padding-bottom: 45px;
     padding-left: 164px;
     padding-right: 112px;
+
     font-size: 20px;
     line-height: 1.4;
   }
 
   & li:not(:last-child) {
     padding-bottom: 23px;
+
     border-left: 1px dashed $primary-text-color;
 
     @include for-size(desktop) {
@@ -61,14 +70,16 @@
 
 .item-guaranties::after {
   content: '';
-  width: 15px;
-  height: 20px;
   position: absolute;
   left: -7px;
   top: 0;
-  background-image: url(../images/icons/fire-color.svg);
 
+  width: 15px;
+  height: 20px;
+
+  background-image: url(../images/icons/fire-color.svg);
   background-repeat: no-repeat;
+  background-position: bottom;
 
   @include for-size(tablet-landscape) {
     left: -7px;
@@ -76,26 +87,36 @@
 
   @include for-size(desktop) {
     left: -10px;
+
     width: 22px;
     height: 30px;
+
     background-size: cover;
   }
-  background-position: bottom;
 }
+
 .item-guaranties:hover {
-  //   cursor: default;
+
+
   &::after {
+    -webkit-animation-name: fire;
     animation-name: fire;
+    -webkit-animation-duration: 2s;
     animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
     animation-direction: normal;
   }
 }
-@keyframes fire {
+
+@-webkit-keyframes fire {
   from {
     background-size: 0;
   }
+
   50% {
     background-size: 100%;
   }
@@ -103,6 +124,25 @@
   51% {
     background-size: 100%;
   }
+
+  to {
+    background-size: 0;
+  }
+}
+
+@keyframes fire {
+  from {
+    background-size: 0;
+  }
+
+  50% {
+    background-size: 100%;
+  }
+
+  51% {
+    background-size: 100%;
+  }
+
   to {
     background-size: 0;
   }

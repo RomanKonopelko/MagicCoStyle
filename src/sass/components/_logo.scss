@@ -1,18 +1,20 @@
 // Логотип//
 
 .logo-link {
-
+  display: inline-block;
   width: 80px;
   height: 29px;
-  display: inline-block;
+
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../images/icons/logo-phone.svg);
 
   @include for-size(tablet-landscape) {
-    margin-right: 230px;
     width: 128px;
     height: 45px;
+
+    margin-right: 230px;
+
     background-image: url(../images/icons/logo-main.svg);
   }
 
@@ -22,9 +24,10 @@
 }
 
 .logo-link-menu {
+  display: inline-block;
   width: 80px;
   height: 29px;
-  display: inline-block;
+
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../images/icons/logo-phone-white.svg);
@@ -32,6 +35,7 @@
   @include for-size(tablet-landscape) {
     width: 128px;
     height: 45px;
+
     background-image: url(../images/icons/logo-main-white.svg);
   }
 }
