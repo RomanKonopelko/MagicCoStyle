@@ -30,9 +30,12 @@
   color: $primary-text-color;
 }
 
-// .nav-items:not(:last-child) {
-//   margin-right: 40px;
-// }
+.nav-items:not(:last-child) {
+  @include for-size(desktop) {
+    margin-right: 40px;
+  }
+
+}
 
 .nav-items>a {
   font-weight: bold;
