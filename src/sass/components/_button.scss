@@ -28,7 +28,7 @@
 
   //  Анимация
   transition: color $timing-function $transition-duration,
-  background-color $timing-function $transition-duration;
+    background-color $timing-function $transition-duration;
 
   &:hover {
     color: #ffffff;
@@ -84,15 +84,17 @@
 
   & span:nth-child(1) {
     position: absolute;
-    top: 2px;
+    top: 4px;
     left: 0;
     width: 100%;
     height: 2px;
-    background: -webkit-gradient(linear,
-        left top,
-        right top,
-        from($accent-color),
-        to(white));
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from($accent-color),
+      to(white)
+    );
     background: -o-linear-gradient(left, $accent-color, white);
     background: linear-gradient(to right, $accent-color, white);
     -webkit-animation: animate1 7s ease-in-out infinite;
@@ -126,14 +128,16 @@
   & span:nth-child(2) {
     position: absolute;
     top: 0;
-    right: 2px;
+    right: 4px;
     width: 2px;
     height: 100%;
-    background: -webkit-gradient(linear,
-        left top,
-        left bottom,
-        from($accent-color),
-        to(white));
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from($accent-color),
+      to(white)
+    );
     background: -o-linear-gradient(top, $accent-color, white);
     background: linear-gradient(to bottom, $accent-color, white);
     -webkit-animation: animate2 7s ease-in-out infinite;
@@ -166,15 +170,17 @@
 
   & span:nth-child(3) {
     position: absolute;
-    bottom: 2px;
+    bottom: 4px;
     left: 0;
     width: 100%;
     height: 2px;
-    background: -webkit-gradient(linear,
-        right top,
-        left top,
-        from($accent-color),
-        to(white));
+    background: -webkit-gradient(
+      linear,
+      right top,
+      left top,
+      from($accent-color),
+      to(white)
+    );
     background: -o-linear-gradient(right, $accent-color, white);
     background: linear-gradient(to left, $accent-color, white);
     -webkit-animation: animate3 7s ease-in-out infinite;
@@ -208,14 +214,16 @@
   & span:nth-child(4) {
     position: absolute;
     top: 0;
-    left: 2px;
+    left: 4px;
     width: 2px;
     height: 100%;
-    background: -webkit-gradient(linear,
-        left bottom,
-        left top,
-        from($accent-color),
-        to(white));
+    background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from($accent-color),
+      to(white)
+    );
     background: -o-linear-gradient(bottom, $accent-color, white);
     background: linear-gradient(to top, $accent-color, white);
     -webkit-animation: animate4 8s ease-in-out infinite;
@@ -319,13 +327,13 @@
   }
 }
 
-.mobile-menu+.menu-button .icon-menu {
+.mobile-menu + .menu-button .icon-menu {
   visibility: visible;
   opacity: 1;
   transition: opacity 2000ms $timing-function;
 }
 
-.mobile-menu+.menu-button .icon-close {
+.mobile-menu + .menu-button .icon-close {
   visibility: hidden;
   opacity: 0;
   fill: #ffffff;
@@ -335,12 +343,12 @@
   fill: $accent-color;
 }
 
-.mobile-menu.is-open+.menu-button .icon-menu {
+.mobile-menu.is-open + .menu-button .icon-menu {
   visibility: hidden;
   opacity: 0;
 }
 
-.mobile-menu.is-open+.menu-button .icon-close {
+.mobile-menu.is-open + .menu-button .icon-close {
   visibility: visible;
   display: block;
   opacity: 1;
@@ -385,7 +393,7 @@
 
   //  Анимация
   transition: color $timing-function $transition-duration,
-  background-color $timing-function $transition-duration;
+    background-color $timing-function $transition-duration;
 
   &:hover {
     color: #ffffff;
