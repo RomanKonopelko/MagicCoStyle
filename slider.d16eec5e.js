@@ -121,21 +121,16 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 jQuery(document).ready(function ($) {
   $('.slider').slick({
     dots: false,
-    variableWidth: true,
-    adaptiveHeight: false,
     infinite: true,
     speed: 1000,
     asNavFor: '.thumbnail-slider',
     mobileFirst: true,
     slidesToShow: 1,
     initialSlide: 2,
-    centerMode: true,
     responsive: [{
       breakpoint: 768,
       settings: {
         asNavFor: false,
-        adaptiveWidth: true,
-        adaptiveHeight: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: false
@@ -143,13 +138,11 @@ jQuery(document).ready(function ($) {
     }]
   });
   $('.thumbnail-slider').slick({
-    adaptiveWidth: false,
     slidesToShow: 7,
     slidesToScroll: 1,
     arrows: false,
     draggable: false,
     infinite: true,
-    itemWidth: 500,
     asNavFor: '.slider',
     dots: false,
     centerMode: true,
@@ -158,7 +151,7 @@ jQuery(document).ready(function ($) {
       breakpoint: 768,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         arrows: false,
         draggable: false,
         infinite: true,
@@ -197,7 +190,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51100" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51092" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
