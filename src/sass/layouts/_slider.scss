@@ -135,7 +135,7 @@
 
 .slider .slick-arrow {
   position: absolute;
-  top: 107%;
+  top: 108%;
   -webkit-transform: translate(0%, -50%);
   -ms-transform: translate(0%, -50%);
   transform: translate(0%, -50%);
@@ -144,7 +144,7 @@
   cursor: pointer;
   border: none;
   width: 55px;
-  height: 8%;
+  height: 10%;
 
   @include for-size(min-mobile) {
     top: 109%;
