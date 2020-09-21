@@ -6,7 +6,6 @@
 /* Слайдер */
 
 .slider {
-  margin: 0 auto;
   -webkit-box-shadow: 0px 6px 14px rgba(49, 48, 47, 0.158);
   box-shadow: 0px 6px 14px rgba(49, 48, 47, 0.158);
 }
@@ -237,7 +236,7 @@
   }
 
   @include for-size(desktop) {
-    padding: 50px;
+    padding: 50px 82px;
   }
 }
 
