@@ -3,16 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://romankonopelko.github.io/magiccostyle",
+  "homepage": "https://github.com/SvetlanaKhvastova/magiccostyle-project",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html",
-    "predeploy": "npm run build -- --public-url=/magiccostyle/",
+    "predeploy": "npm run build -- --public-url=/magiccostyle-project/",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/SvetlanaKhvastova/magiccostyle-project"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
