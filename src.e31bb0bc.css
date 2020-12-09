@@ -1028,17 +1028,10 @@ p {
 }
 
 .backdrop.is-hidden .modal {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+  -ms-transform: translate(-50%, -50%) scale(1.2);
+  transform: translate(-50%, -50%) scale(1.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-@media (min-width: 480px) {
-  .backdrop.is-hidden .modal {
-    -webkit-transform: translate(-50%, -50%) scale(1.2);
-    -ms-transform: translate(-50%, -50%) scale(1.2);
-    transform: translate(-50%, -50%) scale(1.2);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
 }
 
 .modal {
@@ -1086,7 +1079,7 @@ p {
   position: relative;
   margin-right: auto;
   margin-left: auto;
-  padding: 35px;
+  padding: 40px;
   color: #111518;
 }
 

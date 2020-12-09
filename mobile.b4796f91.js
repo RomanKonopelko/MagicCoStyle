@@ -117,20 +117,16 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/modal.js":[function(require,module,exports) {
+})({"mobile.js":[function(require,module,exports) {
 (function () {
-  var refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]')
-  };
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
-
-  function toggleModal() {
-    document.body.classList.toggle("modal-open");
-    refs.modal.classList.toggle('is-hidden');
-  }
+  var menuBtnRef = document.querySelector("[data-menu-button]");
+  var mobileMenuRef = document.querySelector("[data-menu]");
+  menuBtnRef.addEventListener("click", function () {
+    var expanded = menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+    menuBtnRef.classList.toggle("is-open");
+    menuBtnRef.setAttribute("aria-expanded", !expanded);
+    mobileMenuRef.classList.toggle("is-open");
+  });
 })();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -160,7 +156,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56216" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59097" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -336,5 +332,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/modal.js"], null)
-//# sourceMappingURL=/modal.4331011c.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","mobile.js"], null)
+//# sourceMappingURL=/mobile.b4796f91.js.map
